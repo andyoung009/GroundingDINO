@@ -138,6 +138,7 @@ output/
 outputs/
 subs/
 logs/
+.runs/
 runs/
 
 grounding/config/configs
