@@ -138,9 +138,14 @@ output/
 outputs/
 subs/
 logs/
+runs/
 
 grounding/config/configs
 grounding/version.py
 
 vis/
 tmp/
+
+*.jpeg
+*.1
+*.pth

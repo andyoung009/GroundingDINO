@@ -603,6 +603,7 @@ def get_phrases_from_posmap(
     if posmap.dim() == 1:
         non_zero_idx = posmap.nonzero(as_tuple=True)[0].tolist()
         token_ids = [tokenized["input_ids"][i] for i in non_zero_idx]
+        # 使用 `tokenizer.decode()` 方法将分词结果转换为文本
         return tokenizer.decode(token_ids)
     else:
         raise NotImplementedError("posmap must be 1-dim")

@@ -47,6 +47,9 @@ from .bertwarper import (
 from .transformer import build_transformer
 from .utils import MLP, ContrastiveEmbed, sigmoid_focal_loss
 
+from torch.utils.tensorboard import SummaryWriter
+# Writer will output to ./runs/ directory by default
+writer = SummaryWriter()
 
 class GroundingDINO(nn.Module):
     """This is the Cross-Attention Detector module that performs object detection"""
@@ -283,10 +286,14 @@ class GroundingDINO(nn.Module):
         }
 
         # import ipdb; ipdb.set_trace()
-
+        # 经过如下处理，使得图片有了mask，从image变成了NestedTensor(tensor, mask)
         if isinstance(samples, (list, torch.Tensor)):
             samples = nested_tensor_from_tensor_list(samples)
         features, poss = self.backbone(samples)
+
+        # tensors_gra, masks_gra = NestedTensor.decompose(samples)
+        # writer.add_graph(self.backbone, tensors_gra)
+
 
         srcs = []
         masks = []
@@ -358,11 +365,13 @@ class GroundingDINO(nn.Module):
             for a, b in zip(outputs_class[:-1], outputs_coord[:-1])
         ]
 
-
+# register" 装饰器将 "build_groundingdino" 函数添加到 "MODULE_BUILD_FUNCS" 注册表中。
 @MODULE_BUILD_FUNCS.registe_with_name(module_name="groundingdino")
 def build_groundingdino(args):
 
+    # 输入图像的主干网络
     backbone = build_backbone(args)
+    # 论文图3中的2、3两部分，分别包括encoder和decoder
     transformer = build_transformer(args)
 
     dn_labelbook_size = args.dn_labelbook_size

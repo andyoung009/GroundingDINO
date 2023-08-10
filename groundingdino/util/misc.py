@@ -392,6 +392,7 @@ def _max_by_axis(the_list):
     maxes = the_list[0]
     for sublist in the_list[1:]:
         for index, item in enumerate(sublist):
+            # 按照不同样本沿着c,h,w等维度分别找到他们的最大值，正如函数名称的定义一样
             maxes[index] = max(maxes[index], item)
     return maxes
 

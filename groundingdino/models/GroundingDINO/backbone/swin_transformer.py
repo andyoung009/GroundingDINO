@@ -19,6 +19,7 @@ import torch.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 
 from groundingdino.util.misc import NestedTensor
+# from torchsummary import summary
 
 
 class Mlp(nn.Module):
@@ -678,7 +679,7 @@ class SwinTransformer(nn.Module):
     def forward_raw(self, x):
         """Forward function."""
         x = self.patch_embed(x)
-
+        print('hello!')
         Wh, Ww = x.size(2), x.size(3)
         if self.ape:
             # interpolate the position embedding to the corresponding size
@@ -707,12 +708,14 @@ class SwinTransformer(nn.Module):
         # outs:
         #   [torch.Size([2, 192, 256, 256]), torch.Size([2, 384, 128, 128]), \
         #       torch.Size([2, 768, 64, 64]), torch.Size([2, 1536, 32, 32])]
+        print('the forward_raw message!')
         return tuple(outs)
 
     def forward(self, tensor_list: NestedTensor):
         x = tensor_list.tensors
 
         """Forward function."""
+        # x = self.patch_embed(tensor_list)
         x = self.patch_embed(x)
 
         Wh, Ww = x.size(2), x.size(3)
@@ -725,6 +728,7 @@ class SwinTransformer(nn.Module):
         else:
             x = x.flatten(2).transpose(1, 2)
         x = self.pos_drop(x)
+        print('the forward message!')
 
         outs = []
         for i in range(self.num_layers):
@@ -748,9 +752,13 @@ class SwinTransformer(nn.Module):
         for idx, out_i in enumerate(outs):
             m = tensor_list.mask
             assert m is not None
+            # `m[None]`表示将张量 `m` 的维度在第0维前插入一个新的维度，
+            # 这样可以将形状为 `(h, w)` 的 2D 张量转换为形状为 `(1, h, w)` 的 3D 张量。这里使用 `None` 索引相当于使用 `torch.newaxis` 创建一个新维度。
+            # `.float()` 是将张量转换为浮点型数据类型，这里可能是因为插值操作需要在浮点型张量上进行。如果张量本身已经是浮点型，则这一步操作可以省略。
             mask = F.interpolate(m[None].float(), size=out_i.shape[-2:]).to(torch.bool)[0]
             outs_dict[idx] = NestedTensor(out_i, mask)
 
+        print("it is a end of print!")
         return outs_dict
 
     def train(self, mode=True):
@@ -792,11 +800,19 @@ def build_swin_transformer(modelname, pretrain_img_size, **kw):
 
 
 if __name__ == "__main__":
+    print("it is a test begin!")
+
     model = build_swin_transformer("swin_L_384_22k", 384, dilation=True)
-    x = torch.rand(2, 3, 1024, 1024)
-    y = model.forward_raw(x)
+    # x = torch.rand(2, 3, 1024, 1024)
+    summary(model, (3, 1024, 1024))
+    # y = model.forward_raw(x)
+    y = model(y)
+    print("it is a test!")
+    print(y.shape)
     import ipdb
 
     ipdb.set_trace()
     x = torch.rand(2, 3, 384, 384)
     y = model.forward_raw(x)
+    print(y.shape)
+

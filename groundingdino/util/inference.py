@@ -69,8 +69,10 @@ def predict(
     prediction_boxes = outputs["pred_boxes"].cpu()[0]  # prediction_boxes.shape = (nq, 4)
 
     mask = prediction_logits.max(dim=1)[0] > box_threshold
-    logits = prediction_logits[mask]  # logits.shape = (n, 256)
-    boxes = prediction_boxes[mask]  # boxes.shape = (n, 4)
+    print(mask)
+    print(f'mask\'s shape is {mask.shape}!')
+    logits = prediction_logits[mask]  # logits.shape = (n, 256)中最大预测概率大于box_threshold的行被保留，实现shape第一个元素小于nq
+    boxes = prediction_boxes[mask]  # boxes.shape = (n, 4),与上一行类似
 
     tokenizer = model.tokenizer
     tokenized = tokenizer(caption)
@@ -98,6 +100,7 @@ def annotate(image_source: np.ndarray, boxes: torch.Tensor, logits: torch.Tensor
 
     box_annotator = sv.BoxAnnotator()
     annotated_frame = cv2.cvtColor(image_source, cv2.COLOR_RGB2BGR)
+    # 使用来自“sv”模块的“BoxAnnotator”类在输入图像上绘制边界框和标签。带注释的图像以BGR格式的NumPy数组返回。
     annotated_frame = box_annotator.annotate(scene=annotated_frame, detections=detections, labels=labels)
     return annotated_frame
 
