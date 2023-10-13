@@ -238,8 +238,8 @@ class Transformer(nn.Module):
             lvl_pos_embed_flatten.append(lvl_pos_embed)
             src_flatten.append(src)
             mask_flatten.append(mask)
-        src_flatten = torch.cat(src_flatten, 1)  # bs, \sum{hxw}, c
-        mask_flatten = torch.cat(mask_flatten, 1)  # bs, \sum{hxw}
+        src_flatten = torch.cat(src_flatten, 1)  # bs, \sum{hxw}, c,拼接后的特征（1共4个级别的特征）
+        mask_flatten = torch.cat(mask_flatten, 1)  # bs, \sum{hxw} 拼接后的掩码（1共4个级别）
         lvl_pos_embed_flatten = torch.cat(lvl_pos_embed_flatten, 1)  # bs, \sum{hxw}, c
         spatial_shapes = torch.as_tensor(
             spatial_shapes, dtype=torch.long, device=src_flatten.device
@@ -268,134 +268,151 @@ class Transformer(nn.Module):
             position_ids=text_dict["position_ids"],
             text_self_attention_masks=text_dict["text_self_attention_masks"],
         )
-        #########################################################
-        # End Encoder
-        # - memory: bs, \sum{hw}, c
-        # - mask_flatten: bs, \sum{hw}
-        # - lvl_pos_embed_flatten: bs, \sum{hw}, c
-        # - enc_intermediate_output: None or (nenc+1, bs, nq, c) or (nenc, bs, nq, c)
-        # - enc_intermediate_refpoints: None or (nenc+1, bs, nq, c) or (nenc, bs, nq, c)
-        #########################################################
-        text_dict["encoded_text"] = memory_text
-        # if os.environ.get("SHILONG_AMP_INFNAN_DEBUG") == '1':
-        #     if memory.isnan().any() | memory.isinf().any():
-        #         import ipdb; ipdb.set_trace()
-
-        if self.two_stage_type == "standard":
-            output_memory, output_proposals = gen_encoder_output_proposals(
-                memory, mask_flatten, spatial_shapes
-            )
-            output_memory = self.enc_output_norm(self.enc_output(output_memory))
-
-            if text_dict is not None:
-                enc_outputs_class_unselected = self.enc_out_class_embed(output_memory, text_dict)
-            else:
-                enc_outputs_class_unselected = self.enc_out_class_embed(output_memory)
-
-            topk_logits = enc_outputs_class_unselected.max(-1)[0]
-            enc_outputs_coord_unselected = (
-                self.enc_out_bbox_embed(output_memory) + output_proposals
-            )  # (bs, \sum{hw}, 4) unsigmoid
-            topk = self.num_queries
-
-            topk_proposals = torch.topk(topk_logits, topk, dim=1)[1]  # bs, nq
-
-            # gather boxes
-            refpoint_embed_undetach = torch.gather(
-                enc_outputs_coord_unselected, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, 4)
-            )  # unsigmoid
-            refpoint_embed_ = refpoint_embed_undetach.detach()
-            init_box_proposal = torch.gather(
-                output_proposals, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, 4)
-            ).sigmoid()  # sigmoid
-
-            # gather tgt
-            tgt_undetach = torch.gather(
-                output_memory, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, self.d_model)
-            )
-            if self.embed_init_tgt:
-                tgt_ = (
-                    self.tgt_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
-                )  # nq, bs, d_model
-            else:
-                tgt_ = tgt_undetach.detach()
-
-            if refpoint_embed is not None:
-                refpoint_embed = torch.cat([refpoint_embed, refpoint_embed_], dim=1)
-                tgt = torch.cat([tgt, tgt_], dim=1)
-            else:
-                refpoint_embed, tgt = refpoint_embed_, tgt_
-
-        elif self.two_stage_type == "no":
-            tgt_ = (
-                self.tgt_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
-            )  # nq, bs, d_model
-            refpoint_embed_ = (
-                self.refpoint_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
-            )  # nq, bs, 4
-
-            if refpoint_embed is not None:
-                refpoint_embed = torch.cat([refpoint_embed, refpoint_embed_], dim=1)
-                tgt = torch.cat([tgt, tgt_], dim=1)
-            else:
-                refpoint_embed, tgt = refpoint_embed_, tgt_
-
-            if self.num_patterns > 0:
-                tgt_embed = tgt.repeat(1, self.num_patterns, 1)
-                refpoint_embed = refpoint_embed.repeat(1, self.num_patterns, 1)
-                tgt_pat = self.patterns.weight[None, :, :].repeat_interleave(
-                    self.num_queries, 1
-                )  # 1, n_q*n_pat, d_model
-                tgt = tgt_embed + tgt_pat
-
-            init_box_proposal = refpoint_embed_.sigmoid()
-
-        else:
-            raise NotImplementedError("unknown two_stage_type {}".format(self.two_stage_type))
-        #########################################################
-        # End preparing tgt
-        # - tgt: bs, NQ, d_model
-        # - refpoint_embed(unsigmoid): bs, NQ, d_model
-        #########################################################
-
-        #########################################################
-        # Begin Decoder
-        #########################################################
-        hs, references = self.decoder(
-            tgt=tgt.transpose(0, 1),
-            memory=memory.transpose(0, 1),
-            memory_key_padding_mask=mask_flatten,
-            pos=lvl_pos_embed_flatten.transpose(0, 1),
-            refpoints_unsigmoid=refpoint_embed.transpose(0, 1),
+        # 为了提取encoder的输出特征，在这里记录memory_mask, memory_text_mask并作为结果return
+        memory_mask_res, memory_text_mask_res = self.encoder(
+            src_flatten,
+            pos=lvl_pos_embed_flatten,
             level_start_index=level_start_index,
             spatial_shapes=spatial_shapes,
             valid_ratios=valid_ratios,
-            tgt_mask=attn_mask,
+            key_padding_mask=mask_flatten,
             memory_text=text_dict["encoded_text"],
             text_attention_mask=~text_dict["text_token_mask"],
             # we ~ the mask . False means use the token; True means pad the token
+            position_ids=text_dict["position_ids"],
+            text_self_attention_masks=text_dict["text_self_attention_masks"],
         )
         #########################################################
-        # End Decoder
-        # hs: n_dec, bs, nq, d_model
-        # references: n_dec+1, bs, nq, query_dim
-        #########################################################
+        # End Encoder
+        # # - memory: bs, \sum{hw}, c
+        # # - mask_flatten: bs, \sum{hw}
+        # # - lvl_pos_embed_flatten: bs, \sum{hw}, c
+        # # - enc_intermediate_output: None or (nenc+1, bs, nq, c) or (nenc, bs, nq, c)
+        # # - enc_intermediate_refpoints: None or (nenc+1, bs, nq, c) or (nenc, bs, nq, c)
+        # #########################################################
+        # text_dict["encoded_text"] = memory_text
+        # # if os.environ.get("SHILONG_AMP_INFNAN_DEBUG") == '1':
+        # #     if memory.isnan().any() | memory.isinf().any():
+        # #         import ipdb; ipdb.set_trace()
 
-        #########################################################
-        # Begin postprocess
-        #########################################################
-        if self.two_stage_type == "standard":
-            hs_enc = tgt_undetach.unsqueeze(0)
-            ref_enc = refpoint_embed_undetach.sigmoid().unsqueeze(0)
-        else:
-            hs_enc = ref_enc = None
-        #########################################################
-        # End postprocess
-        # hs_enc: (n_enc+1, bs, nq, d_model) or (1, bs, nq, d_model) or (n_enc, bs, nq, d_model) or None
-        # ref_enc: (n_enc+1, bs, nq, query_dim) or (1, bs, nq, query_dim) or (n_enc, bs, nq, d_model) or None
-        #########################################################
+        # if self.two_stage_type == "standard":
+        #     output_memory, output_proposals = gen_encoder_output_proposals(
+        #         memory, mask_flatten, spatial_shapes
+        #     )
+        #     output_memory = self.enc_output_norm(self.enc_output(output_memory))
 
-        return hs, references, hs_enc, ref_enc, init_box_proposal
+        #     if text_dict is not None:
+        #         enc_outputs_class_unselected = self.enc_out_class_embed(output_memory, text_dict)
+        #     else:
+        #         enc_outputs_class_unselected = self.enc_out_class_embed(output_memory)
+
+        #     topk_logits = enc_outputs_class_unselected.max(-1)[0]
+        #     enc_outputs_coord_unselected = (
+        #         self.enc_out_bbox_embed(output_memory) + output_proposals
+        #     )  # (bs, \sum{hw}, 4) unsigmoid
+        #     topk = self.num_queries
+        #     # 为了使grounding DINO和深度信息融合调整晓了topk 900->8
+        #     # topk = 8
+
+        #     topk_proposals = torch.topk(topk_logits, topk, dim=1)[1]  # bs, nq 从所有图像特征[1, 6380, 256]和文本text_dict["encoded_text"]的[1, 9, 256]维度中选出最相似（余弦相似度）的topk个特征
+
+        #     # gather boxes, 选出与上述topk_proposals对应的候选框
+        #     refpoint_embed_undetach = torch.gather(
+        #         enc_outputs_coord_unselected, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, 4)
+        #     )  # unsigmoid
+        #     refpoint_embed_ = refpoint_embed_undetach.detach()
+        #     init_box_proposal = torch.gather(
+        #         output_proposals, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, 4)
+        #     ).sigmoid()  # sigmoid
+
+        #     # gather tgt, tgt实际上是与查询词最相关的图像特征，维度为256
+        #     tgt_undetach = torch.gather(
+        #         output_memory, 1, topk_proposals.unsqueeze(-1).repeat(1, 1, self.d_model)
+        #     )
+        #     if self.embed_init_tgt:
+        #         tgt_ = (
+        #             self.tgt_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
+        #         )  # nq, bs, d_model
+        #     else:
+        #         tgt_ = tgt_undetach.detach()
+
+        #     if refpoint_embed is not None:
+        #         refpoint_embed = torch.cat([refpoint_embed, refpoint_embed_], dim=1)
+        #         tgt = torch.cat([tgt, tgt_], dim=1)
+        #     else:
+        #         refpoint_embed, tgt = refpoint_embed_, tgt_
+
+        # elif self.two_stage_type == "no":
+        #     tgt_ = (
+        #         self.tgt_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
+        #     )  # nq, bs, d_model
+        #     refpoint_embed_ = (
+        #         self.refpoint_embed.weight[:, None, :].repeat(1, bs, 1).transpose(0, 1)
+        #     )  # nq, bs, 4
+
+        #     if refpoint_embed is not None:
+        #         refpoint_embed = torch.cat([refpoint_embed, refpoint_embed_], dim=1)
+        #         tgt = torch.cat([tgt, tgt_], dim=1)
+        #     else:
+        #         refpoint_embed, tgt = refpoint_embed_, tgt_
+
+        #     if self.num_patterns > 0:
+        #         tgt_embed = tgt.repeat(1, self.num_patterns, 1)
+        #         refpoint_embed = refpoint_embed.repeat(1, self.num_patterns, 1)
+        #         tgt_pat = self.patterns.weight[None, :, :].repeat_interleave(
+        #             self.num_queries, 1
+        #         )  # 1, n_q*n_pat, d_model
+        #         tgt = tgt_embed + tgt_pat
+
+        #     init_box_proposal = refpoint_embed_.sigmoid()
+
+        # else:
+        #     raise NotImplementedError("unknown two_stage_type {}".format(self.two_stage_type))
+        # #########################################################
+        # # End preparing tgt
+        # # - tgt: bs, NQ, d_model
+        # # - refpoint_embed(unsigmoid): bs, NQ, d_model
+        # #########################################################
+
+        # #########################################################
+        # # Begin Decoder
+        # #########################################################
+        # hs, references = self.decoder(
+        #     tgt=tgt.transpose(0, 1),
+        #     memory=memory.transpose(0, 1),
+        #     memory_key_padding_mask=mask_flatten,
+        #     pos=lvl_pos_embed_flatten.transpose(0, 1),
+        #     refpoints_unsigmoid=refpoint_embed.transpose(0, 1),
+        #     level_start_index=level_start_index,
+        #     spatial_shapes=spatial_shapes,
+        #     valid_ratios=valid_ratios,
+        #     tgt_mask=attn_mask,
+        #     memory_text=text_dict["encoded_text"],
+        #     text_attention_mask=~text_dict["text_token_mask"],
+        #     # we ~ the mask . False means use the token; True means pad the token
+        # )
+        # #########################################################
+        # # End Decoder
+        # # hs: n_dec, bs, nq, d_model
+        # # references: n_dec+1, bs, nq, query_dim
+        # #########################################################
+
+        # #########################################################
+        # # Begin postprocess
+        # #########################################################
+        # if self.two_stage_type == "standard":
+        #     hs_enc = tgt_undetach.unsqueeze(0)
+        #     ref_enc = refpoint_embed_undetach.sigmoid().unsqueeze(0)
+        # else:
+        #     hs_enc = ref_enc = None
+        # #########################################################
+        # # End postprocess
+        # # hs_enc: (n_enc+1, bs, nq, d_model) or (1, bs, nq, d_model) or (n_enc, bs, nq, d_model) or None
+        # # ref_enc: (n_enc+1, bs, nq, query_dim) or (1, bs, nq, query_dim) or (n_enc, bs, nq, d_model) or None
+        # #########################################################
+
+        # return hs, references, hs_enc, ref_enc, init_box_proposal
+        return memory_mask_res, memory_text_mask_res
         # hs: (n_dec, bs, nq, d_model)
         # references: sigmoid coordinates. (n_dec+1, bs, bq, 4)
         # hs_enc: (n_enc+1, bs, nq, d_model) or (1, bs, nq, d_model) or None
@@ -518,7 +535,7 @@ class TransformerEncoder(nn.Module):
 
         output = src
 
-        # preparation and reshape
+        # preparation and reshape , 生成的参考点实际是就是anchor点 （bs, sum(hi*wi), 4, 2）
         if self.num_layers > 0:
             reference_points = self.get_reference_points(
                 spatial_shapes, valid_ratios, device=src.device

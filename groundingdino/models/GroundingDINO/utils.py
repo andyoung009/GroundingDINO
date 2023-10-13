@@ -262,6 +262,7 @@ class ContrastiveEmbed(nn.Module):
         res.masked_fill_(~text_token_mask[:, None, :], float("-inf"))
 
         # padding to max_text_len
+        # 这两行代码实现了将一个张量 res 扩展为一个新的张量 new_res 的操作，并在新张量的最后一个维度上填充了负无穷大的值
         new_res = torch.full((*res.shape[:-1], self.max_text_len), float("-inf"), device=res.device)
         new_res[..., : res.shape[-1]] = res
 

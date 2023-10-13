@@ -1,0 +1,1425 @@
+Epoch [1/50], Step [6/48], Loss: nan
+Epoch [1/50], Step [12/48], Loss: nan
+Epoch [1/50], Step [18/48], Loss: nan
+Epoch [1/50], Step [24/48], Loss: nan
+Epoch [1/50], Step [30/48], Loss: nan
+Epoch [1/50], Step [36/48], Loss: nan
+Epoch [1/50], Step [42/48], Loss: nan
+Epoch [1/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [1/50], Step [48/48], Loss: nan
+Epoch [2/50], Step [6/48], Loss: nan
+Epoch [2/50], Step [12/48], Loss: nan
+Epoch [2/50], Step [18/48], Loss: nan
+Epoch [2/50], Step [24/48], Loss: nan
+Epoch [2/50], Step [30/48], Loss: nan
+Epoch [2/50], Step [36/48], Loss: nan
+Epoch [2/50], Step [42/48], Loss: nan
+Epoch [2/50], Step [48/48], Loss: nan
+Epoch [3/50], Step [6/48], Loss: nan
+Epoch [3/50], Step [12/48], Loss: nan
+Epoch [3/50], Step [18/48], Loss: nan
+Epoch [3/50], Step [24/48], Loss: nan
+Epoch [3/50], Step [30/48], Loss: nan
+Epoch [3/50], Step [36/48], Loss: nan
+Epoch [3/50], Step [42/48], Loss: nan
+Epoch [3/50], Step [48/48], Loss: nan
+Epoch [4/50], Step [6/48], Loss: nan
+Epoch [4/50], Step [12/48], Loss: nan
+Epoch [4/50], Step [18/48], Loss: nan
+Epoch [4/50], Step [24/48], Loss: nan
+Epoch [4/50], Step [30/48], Loss: nan
+Epoch [4/50], Step [36/48], Loss: nan
+Epoch [4/50], Step [42/48], Loss: nan
+Epoch [4/50], Step [48/48], Loss: nan
+Epoch [5/50], Step [6/48], Loss: nan
+Epoch [5/50], Step [12/48], Loss: nan
+Epoch [5/50], Step [18/48], Loss: nan
+Epoch [5/50], Step [24/48], Loss: nan
+Epoch [5/50], Step [30/48], Loss: nan
+Epoch [5/50], Step [36/48], Loss: nan
+Epoch [5/50], Step [42/48], Loss: nan
+Epoch [5/50], Step [48/48], Loss: nan
+Epoch [6/50], Step [6/48], Loss: nan
+Epoch [6/50], Step [12/48], Loss: nan
+Epoch [6/50], Step [18/48], Loss: nan
+Epoch [6/50], Step [24/48], Loss: nan
+Epoch [6/50], Step [30/48], Loss: nan
+Epoch [6/50], Step [36/48], Loss: nan
+Epoch [6/50], Step [42/48], Loss: nan
+Epoch [6/50], Step [48/48], Loss: nan
+Epoch [7/50], Step [6/48], Loss: nan
+Epoch [7/50], Step [12/48], Loss: nan
+Epoch [7/50], Step [18/48], Loss: nan
+Epoch [7/50], Step [24/48], Loss: nan
+Epoch [7/50], Step [30/48], Loss: nan
+Epoch [7/50], Step [36/48], Loss: nan
+Epoch [7/50], Step [42/48], Loss: nan
+Epoch [7/50], Step [48/48], Loss: nan
+Epoch [8/50], Step [6/48], Loss: nan
+Epoch [8/50], Step [12/48], Loss: nan
+Epoch [8/50], Step [18/48], Loss: nan
+Epoch [8/50], Step [24/48], Loss: nan
+Epoch [8/50], Step [30/48], Loss: nan
+Epoch [8/50], Step [36/48], Loss: nan
+Epoch [8/50], Step [42/48], Loss: nan
+Epoch [8/50], Step [48/48], Loss: nan
+Epoch [9/50], Step [6/48], Loss: nan
+Epoch [9/50], Step [12/48], Loss: nan
+Epoch [9/50], Step [18/48], Loss: nan
+Epoch [9/50], Step [24/48], Loss: nan
+Epoch [9/50], Step [30/48], Loss: nan
+Epoch [9/50], Step [36/48], Loss: nan
+Epoch [9/50], Step [42/48], Loss: nan
+Epoch [9/50], Step [48/48], Loss: nan
+Epoch [10/50], Step [6/48], Loss: nan
+Epoch [10/50], Step [12/48], Loss: nan
+Epoch [10/50], Step [18/48], Loss: nan
+Epoch [10/50], Step [24/48], Loss: nan
+Epoch [10/50], Step [30/48], Loss: nan
+Epoch [10/50], Step [36/48], Loss: nan
+Epoch [10/50], Step [42/48], Loss: nan
+Epoch [10/50], Step [48/48], Loss: nan
+Epoch [11/50], Step [6/48], Loss: nan
+Epoch [11/50], Step [12/48], Loss: nan
+Epoch [11/50], Step [18/48], Loss: nan
+Epoch [11/50], Step [24/48], Loss: nan
+Epoch [11/50], Step [30/48], Loss: nan
+Epoch [11/50], Step [36/48], Loss: nan
+Epoch [11/50], Step [42/48], Loss: nan
+Epoch [11/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [11/50], Step [48/48], Loss: nan
+Epoch [12/50], Step [6/48], Loss: nan
+Epoch [12/50], Step [12/48], Loss: nan
+Epoch [12/50], Step [18/48], Loss: nan
+Epoch [12/50], Step [24/48], Loss: nan
+Epoch [12/50], Step [30/48], Loss: nan
+Epoch [12/50], Step [36/48], Loss: nan
+Epoch [12/50], Step [42/48], Loss: nan
+Epoch [12/50], Step [48/48], Loss: nan
+Epoch [13/50], Step [6/48], Loss: nan
+Epoch [13/50], Step [12/48], Loss: nan
+Epoch [13/50], Step [18/48], Loss: nan
+Epoch [13/50], Step [24/48], Loss: nan
+Epoch [13/50], Step [30/48], Loss: nan
+Epoch [13/50], Step [36/48], Loss: nan
+Epoch [13/50], Step [42/48], Loss: nan
+Epoch [13/50], Step [48/48], Loss: nan
+Epoch [14/50], Step [6/48], Loss: nan
+Epoch [14/50], Step [12/48], Loss: nan
+Epoch [14/50], Step [18/48], Loss: nan
+Epoch [14/50], Step [24/48], Loss: nan
+Epoch [14/50], Step [30/48], Loss: nan
+Epoch [14/50], Step [36/48], Loss: nan
+Epoch [14/50], Step [42/48], Loss: nan
+Epoch [14/50], Step [48/48], Loss: nan
+Epoch [15/50], Step [6/48], Loss: nan
+Epoch [15/50], Step [12/48], Loss: nan
+Epoch [15/50], Step [18/48], Loss: nan
+Epoch [15/50], Step [24/48], Loss: nan
+Epoch [15/50], Step [30/48], Loss: nan
+Epoch [15/50], Step [36/48], Loss: nan
+Epoch [15/50], Step [42/48], Loss: nan
+Epoch [15/50], Step [48/48], Loss: nan
+Epoch [16/50], Step [6/48], Loss: nan
+Epoch [16/50], Step [12/48], Loss: nan
+Epoch [16/50], Step [18/48], Loss: nan
+Epoch [16/50], Step [24/48], Loss: nan
+Epoch [16/50], Step [30/48], Loss: nan
+Epoch [16/50], Step [36/48], Loss: nan
+Epoch [16/50], Step [42/48], Loss: nan
+Epoch [16/50], Step [48/48], Loss: nan
+Epoch [17/50], Step [6/48], Loss: nan
+Epoch [17/50], Step [12/48], Loss: nan
+Epoch [17/50], Step [18/48], Loss: nan
+Epoch [17/50], Step [24/48], Loss: nan
+Epoch [17/50], Step [30/48], Loss: nan
+Epoch [17/50], Step [36/48], Loss: nan
+Epoch [17/50], Step [42/48], Loss: nan
+Epoch [17/50], Step [48/48], Loss: nan
+Epoch [18/50], Step [6/48], Loss: nan
+Epoch [18/50], Step [12/48], Loss: nan
+Epoch [18/50], Step [18/48], Loss: nan
+Epoch [18/50], Step [24/48], Loss: nan
+Epoch [18/50], Step [30/48], Loss: nan
+Epoch [18/50], Step [36/48], Loss: nan
+Epoch [18/50], Step [42/48], Loss: nan
+Epoch [18/50], Step [48/48], Loss: nan
+Epoch [19/50], Step [6/48], Loss: nan
+Epoch [19/50], Step [12/48], Loss: nan
+Epoch [19/50], Step [18/48], Loss: nan
+Epoch [19/50], Step [24/48], Loss: nan
+Epoch [19/50], Step [30/48], Loss: nan
+Epoch [19/50], Step [36/48], Loss: nan
+Epoch [19/50], Step [42/48], Loss: nan
+Epoch [19/50], Step [48/48], Loss: nan
+Epoch [20/50], Step [6/48], Loss: nan
+Epoch [20/50], Step [12/48], Loss: nan
+Epoch [20/50], Step [18/48], Loss: nan
+Epoch [20/50], Step [24/48], Loss: nan
+Epoch [20/50], Step [30/48], Loss: nan
+Epoch [20/50], Step [36/48], Loss: nan
+Epoch [20/50], Step [42/48], Loss: nan
+Epoch [20/50], Step [48/48], Loss: nan
+Epoch [21/50], Step [6/48], Loss: nan
+Epoch [21/50], Step [12/48], Loss: nan
+Epoch [21/50], Step [18/48], Loss: nan
+Epoch [21/50], Step [24/48], Loss: nan
+Epoch [21/50], Step [30/48], Loss: nan
+Epoch [21/50], Step [36/48], Loss: nan
+Epoch [21/50], Step [42/48], Loss: nan
+Epoch [21/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [21/50], Step [48/48], Loss: nan
+Epoch [22/50], Step [6/48], Loss: nan
+Epoch [22/50], Step [12/48], Loss: nan
+Epoch [22/50], Step [18/48], Loss: nan
+Epoch [22/50], Step [24/48], Loss: nan
+Epoch [22/50], Step [30/48], Loss: nan
+Epoch [22/50], Step [36/48], Loss: nan
+Epoch [22/50], Step [42/48], Loss: nan
+Epoch [22/50], Step [48/48], Loss: nan
+Epoch [23/50], Step [6/48], Loss: nan
+Epoch [23/50], Step [12/48], Loss: nan
+Epoch [23/50], Step [18/48], Loss: nan
+Epoch [23/50], Step [24/48], Loss: nan
+Epoch [23/50], Step [30/48], Loss: nan
+Epoch [23/50], Step [36/48], Loss: nan
+Epoch [23/50], Step [42/48], Loss: nan
+Epoch [23/50], Step [48/48], Loss: nan
+Epoch [24/50], Step [6/48], Loss: nan
+Epoch [24/50], Step [12/48], Loss: nan
+Epoch [24/50], Step [18/48], Loss: nan
+Epoch [24/50], Step [24/48], Loss: nan
+Epoch [24/50], Step [30/48], Loss: nan
+Epoch [24/50], Step [36/48], Loss: nan
+Epoch [24/50], Step [42/48], Loss: nan
+Epoch [24/50], Step [48/48], Loss: nan
+Epoch [25/50], Step [6/48], Loss: nan
+Epoch [25/50], Step [12/48], Loss: nan
+Epoch [25/50], Step [18/48], Loss: nan
+Epoch [25/50], Step [24/48], Loss: nan
+Epoch [25/50], Step [30/48], Loss: nan
+Epoch [25/50], Step [36/48], Loss: nan
+Epoch [25/50], Step [42/48], Loss: nan
+Epoch [25/50], Step [48/48], Loss: nan
+Epoch [26/50], Step [6/48], Loss: nan
+Epoch [26/50], Step [12/48], Loss: nan
+Epoch [26/50], Step [18/48], Loss: nan
+Epoch [26/50], Step [24/48], Loss: nan
+Epoch [26/50], Step [30/48], Loss: nan
+Epoch [26/50], Step [36/48], Loss: nan
+Epoch [26/50], Step [42/48], Loss: nan
+Epoch [26/50], Step [48/48], Loss: nan
+Epoch [27/50], Step [6/48], Loss: nan
+Epoch [27/50], Step [12/48], Loss: nan
+Epoch [27/50], Step [18/48], Loss: nan
+Epoch [27/50], Step [24/48], Loss: nan
+Epoch [27/50], Step [30/48], Loss: nan
+Epoch [27/50], Step [36/48], Loss: nan
+Epoch [27/50], Step [42/48], Loss: nan
+Epoch [27/50], Step [48/48], Loss: nan
+Epoch [28/50], Step [6/48], Loss: nan
+Epoch [28/50], Step [12/48], Loss: nan
+Epoch [28/50], Step [18/48], Loss: nan
+Epoch [28/50], Step [24/48], Loss: nan
+Epoch [28/50], Step [30/48], Loss: nan
+Epoch [28/50], Step [36/48], Loss: nan
+Epoch [28/50], Step [42/48], Loss: nan
+Epoch [28/50], Step [48/48], Loss: nan
+Epoch [29/50], Step [6/48], Loss: nan
+Epoch [29/50], Step [12/48], Loss: nan
+Epoch [29/50], Step [18/48], Loss: nan
+Epoch [29/50], Step [24/48], Loss: nan
+Epoch [29/50], Step [30/48], Loss: nan
+Epoch [29/50], Step [36/48], Loss: nan
+Epoch [29/50], Step [42/48], Loss: nan
+Epoch [29/50], Step [48/48], Loss: nan
+Epoch [30/50], Step [6/48], Loss: nan
+Epoch [30/50], Step [12/48], Loss: nan
+Epoch [30/50], Step [18/48], Loss: nan
+Epoch [30/50], Step [24/48], Loss: nan
+Epoch [30/50], Step [30/48], Loss: nan
+Epoch [30/50], Step [36/48], Loss: nan
+Epoch [30/50], Step [42/48], Loss: nan
+Epoch [30/50], Step [48/48], Loss: nan
+Epoch [31/50], Step [6/48], Loss: nan
+Epoch [31/50], Step [12/48], Loss: nan
+Epoch [31/50], Step [18/48], Loss: nan
+Epoch [31/50], Step [24/48], Loss: nan
+Epoch [31/50], Step [30/48], Loss: nan
+Epoch [31/50], Step [36/48], Loss: nan
+Epoch [31/50], Step [42/48], Loss: nan
+Epoch [31/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [31/50], Step [48/48], Loss: nan
+Epoch [32/50], Step [6/48], Loss: nan
+Epoch [32/50], Step [12/48], Loss: nan
+Epoch [32/50], Step [18/48], Loss: nan
+Epoch [32/50], Step [24/48], Loss: nan
+Epoch [32/50], Step [30/48], Loss: nan
+Epoch [32/50], Step [36/48], Loss: nan
+Epoch [32/50], Step [42/48], Loss: nan
+Epoch [32/50], Step [48/48], Loss: nan
+Epoch [33/50], Step [6/48], Loss: nan
+Epoch [33/50], Step [12/48], Loss: nan
+Epoch [33/50], Step [18/48], Loss: nan
+Epoch [33/50], Step [24/48], Loss: nan
+Epoch [33/50], Step [30/48], Loss: nan
+Epoch [33/50], Step [36/48], Loss: nan
+Epoch [33/50], Step [42/48], Loss: nan
+Epoch [33/50], Step [48/48], Loss: nan
+Epoch [34/50], Step [6/48], Loss: nan
+Epoch [34/50], Step [12/48], Loss: nan
+Epoch [34/50], Step [18/48], Loss: nan
+Epoch [34/50], Step [24/48], Loss: nan
+Epoch [34/50], Step [30/48], Loss: nan
+Epoch [34/50], Step [36/48], Loss: nan
+Epoch [34/50], Step [42/48], Loss: nan
+Epoch [34/50], Step [48/48], Loss: nan
+Epoch [35/50], Step [6/48], Loss: nan
+Epoch [35/50], Step [12/48], Loss: nan
+Epoch [35/50], Step [18/48], Loss: nan
+Epoch [35/50], Step [24/48], Loss: nan
+Epoch [35/50], Step [30/48], Loss: nan
+Epoch [35/50], Step [36/48], Loss: nan
+Epoch [35/50], Step [42/48], Loss: nan
+Epoch [35/50], Step [48/48], Loss: nan
+Epoch [36/50], Step [6/48], Loss: nan
+Epoch [36/50], Step [12/48], Loss: nan
+Epoch [36/50], Step [18/48], Loss: nan
+Epoch [36/50], Step [24/48], Loss: nan
+Epoch [36/50], Step [30/48], Loss: nan
+Epoch [36/50], Step [36/48], Loss: nan
+Epoch [36/50], Step [42/48], Loss: nan
+Epoch [36/50], Step [48/48], Loss: nan
+Epoch [37/50], Step [6/48], Loss: nan
+Epoch [37/50], Step [12/48], Loss: nan
+Epoch [37/50], Step [18/48], Loss: nan
+Epoch [37/50], Step [24/48], Loss: nan
+Epoch [37/50], Step [30/48], Loss: nan
+Epoch [37/50], Step [36/48], Loss: nan
+Epoch [37/50], Step [42/48], Loss: nan
+Epoch [37/50], Step [48/48], Loss: nan
+Epoch [38/50], Step [6/48], Loss: nan
+Epoch [38/50], Step [12/48], Loss: nan
+Epoch [38/50], Step [18/48], Loss: nan
+Epoch [38/50], Step [24/48], Loss: nan
+Epoch [38/50], Step [30/48], Loss: nan
+Epoch [38/50], Step [36/48], Loss: nan
+Epoch [38/50], Step [42/48], Loss: nan
+Epoch [38/50], Step [48/48], Loss: nan
+Epoch [39/50], Step [6/48], Loss: nan
+Epoch [39/50], Step [12/48], Loss: nan
+Epoch [39/50], Step [18/48], Loss: nan
+Epoch [39/50], Step [24/48], Loss: nan
+Epoch [39/50], Step [30/48], Loss: nan
+Epoch [39/50], Step [36/48], Loss: nan
+Epoch [39/50], Step [42/48], Loss: nan
+Epoch [39/50], Step [48/48], Loss: nan
+Epoch [40/50], Step [6/48], Loss: nan
+Epoch [40/50], Step [12/48], Loss: nan
+Epoch [40/50], Step [18/48], Loss: nan
+Epoch [40/50], Step [24/48], Loss: nan
+Epoch [40/50], Step [30/48], Loss: nan
+Epoch [40/50], Step [36/48], Loss: nan
+Epoch [40/50], Step [42/48], Loss: nan
+Epoch [40/50], Step [48/48], Loss: nan
+Epoch [41/50], Step [6/48], Loss: nan
+Epoch [41/50], Step [12/48], Loss: nan
+Epoch [41/50], Step [18/48], Loss: nan
+Epoch [41/50], Step [24/48], Loss: nan
+Epoch [41/50], Step [30/48], Loss: nan
+Epoch [41/50], Step [36/48], Loss: nan
+Epoch [41/50], Step [42/48], Loss: nan
+Epoch [41/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [41/50], Step [48/48], Loss: nan
+Epoch [42/50], Step [6/48], Loss: nan
+Epoch [42/50], Step [12/48], Loss: nan
+Epoch [42/50], Step [18/48], Loss: nan
+Epoch [42/50], Step [24/48], Loss: nan
+Epoch [42/50], Step [30/48], Loss: nan
+Epoch [42/50], Step [36/48], Loss: nan
+Epoch [42/50], Step [42/48], Loss: nan
+Epoch [42/50], Step [48/48], Loss: nan
+Epoch [43/50], Step [6/48], Loss: nan
+Epoch [43/50], Step [12/48], Loss: nan
+Epoch [43/50], Step [18/48], Loss: nan
+Epoch [43/50], Step [24/48], Loss: nan
+Epoch [43/50], Step [30/48], Loss: nan
+Epoch [43/50], Step [36/48], Loss: nan
+Epoch [43/50], Step [42/48], Loss: nan
+Epoch [43/50], Step [48/48], Loss: nan
+Epoch [44/50], Step [6/48], Loss: nan
+Epoch [44/50], Step [12/48], Loss: nan
+Epoch [44/50], Step [18/48], Loss: nan
+Epoch [44/50], Step [24/48], Loss: nan
+Epoch [44/50], Step [30/48], Loss: nan
+Epoch [44/50], Step [36/48], Loss: nan
+Epoch [44/50], Step [42/48], Loss: nan
+Epoch [44/50], Step [48/48], Loss: nan
+Epoch [45/50], Step [6/48], Loss: nan
+Epoch [45/50], Step [12/48], Loss: nan
+Epoch [45/50], Step [18/48], Loss: nan
+Epoch [45/50], Step [24/48], Loss: nan
+Epoch [45/50], Step [30/48], Loss: nan
+Epoch [45/50], Step [36/48], Loss: nan
+Epoch [45/50], Step [42/48], Loss: nan
+Epoch [45/50], Step [48/48], Loss: nan
+Epoch [46/50], Step [6/48], Loss: nan
+Epoch [46/50], Step [12/48], Loss: nan
+Epoch [46/50], Step [18/48], Loss: nan
+Epoch [46/50], Step [24/48], Loss: nan
+Epoch [46/50], Step [30/48], Loss: nan
+Epoch [46/50], Step [36/48], Loss: nan
+Epoch [46/50], Step [42/48], Loss: nan
+Epoch [46/50], Step [48/48], Loss: nan
+Epoch [47/50], Step [6/48], Loss: nan
+Epoch [47/50], Step [12/48], Loss: nan
+Epoch [47/50], Step [18/48], Loss: nan
+Epoch [47/50], Step [24/48], Loss: nan
+Epoch [47/50], Step [30/48], Loss: nan
+Epoch [47/50], Step [36/48], Loss: nan
+Epoch [47/50], Step [42/48], Loss: nan
+Epoch [47/50], Step [48/48], Loss: nan
+Epoch [48/50], Step [6/48], Loss: nan
+Epoch [48/50], Step [12/48], Loss: nan
+Epoch [48/50], Step [18/48], Loss: nan
+Epoch [48/50], Step [24/48], Loss: nan
+Epoch [48/50], Step [30/48], Loss: nan
+Epoch [48/50], Step [36/48], Loss: nan
+Epoch [48/50], Step [42/48], Loss: nan
+Epoch [48/50], Step [48/48], Loss: nan
+Epoch [49/50], Step [6/48], Loss: nan
+Epoch [49/50], Step [12/48], Loss: nan
+Epoch [49/50], Step [18/48], Loss: nan
+Epoch [49/50], Step [24/48], Loss: nan
+Epoch [49/50], Step [30/48], Loss: nan
+Epoch [49/50], Step [36/48], Loss: nan
+Epoch [49/50], Step [42/48], Loss: nan
+Epoch [49/50], Step [48/48], Loss: nan
+Epoch [50/50], Step [6/48], Loss: nan
+Epoch [50/50], Step [12/48], Loss: nan
+Epoch [50/50], Step [18/48], Loss: nan
+Epoch [50/50], Step [24/48], Loss: nan
+Epoch [50/50], Step [30/48], Loss: nan
+Epoch [50/50], Step [36/48], Loss: nan
+Epoch [50/50], Step [42/48], Loss: nan
+Epoch [50/50], Step [48/48], Loss: nan
+Epoch [1/50], Step [6/48], Loss: nan
+Epoch [1/50], Step [12/48], Loss: nan
+Epoch [1/50], Step [18/48], Loss: nan
+Epoch [1/50], Step [24/48], Loss: nan
+Epoch [1/50], Step [30/48], Loss: nan
+Epoch [1/50], Step [36/48], Loss: nan
+Epoch [1/50], Step [42/48], Loss: nan
+Epoch [1/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [1/50], Step [48/48], Loss: nan
+Epoch [2/50], Step [6/48], Loss: nan
+Epoch [2/50], Step [12/48], Loss: nan
+Epoch [2/50], Step [18/48], Loss: nan
+Epoch [2/50], Step [24/48], Loss: nan
+Epoch [2/50], Step [30/48], Loss: nan
+Epoch [2/50], Step [36/48], Loss: nan
+Epoch [2/50], Step [42/48], Loss: nan
+Epoch [2/50], Step [48/48], Loss: nan
+Epoch [3/50], Step [6/48], Loss: nan
+Epoch [3/50], Step [12/48], Loss: nan
+Epoch [3/50], Step [18/48], Loss: nan
+Epoch [3/50], Step [24/48], Loss: nan
+Epoch [3/50], Step [30/48], Loss: nan
+Epoch [3/50], Step [36/48], Loss: nan
+Epoch [3/50], Step [42/48], Loss: nan
+Epoch [3/50], Step [48/48], Loss: nan
+Epoch [4/50], Step [6/48], Loss: nan
+Epoch [4/50], Step [12/48], Loss: nan
+Epoch [4/50], Step [18/48], Loss: nan
+Epoch [4/50], Step [24/48], Loss: nan
+Epoch [4/50], Step [30/48], Loss: nan
+Epoch [4/50], Step [36/48], Loss: nan
+Epoch [4/50], Step [42/48], Loss: nan
+Epoch [4/50], Step [48/48], Loss: nan
+Epoch [5/50], Step [6/48], Loss: nan
+Epoch [5/50], Step [12/48], Loss: nan
+Epoch [5/50], Step [18/48], Loss: nan
+Epoch [5/50], Step [24/48], Loss: nan
+Epoch [5/50], Step [30/48], Loss: nan
+Epoch [5/50], Step [36/48], Loss: nan
+Epoch [5/50], Step [42/48], Loss: nan
+Epoch [5/50], Step [48/48], Loss: nan
+Epoch [6/50], Step [6/48], Loss: nan
+Epoch [6/50], Step [12/48], Loss: nan
+Epoch [6/50], Step [18/48], Loss: nan
+Epoch [6/50], Step [24/48], Loss: nan
+Epoch [6/50], Step [30/48], Loss: nan
+Epoch [6/50], Step [36/48], Loss: nan
+Epoch [6/50], Step [42/48], Loss: nan
+Epoch [6/50], Step [48/48], Loss: nan
+Epoch [7/50], Step [6/48], Loss: nan
+Epoch [7/50], Step [12/48], Loss: nan
+Epoch [7/50], Step [18/48], Loss: nan
+Epoch [7/50], Step [24/48], Loss: nan
+Epoch [7/50], Step [30/48], Loss: nan
+Epoch [7/50], Step [36/48], Loss: nan
+Epoch [7/50], Step [42/48], Loss: nan
+Epoch [7/50], Step [48/48], Loss: nan
+Epoch [8/50], Step [6/48], Loss: nan
+Epoch [8/50], Step [12/48], Loss: nan
+Epoch [8/50], Step [18/48], Loss: nan
+Epoch [8/50], Step [24/48], Loss: nan
+Epoch [8/50], Step [30/48], Loss: nan
+Epoch [8/50], Step [36/48], Loss: nan
+Epoch [8/50], Step [42/48], Loss: nan
+Epoch [8/50], Step [48/48], Loss: nan
+Epoch [9/50], Step [6/48], Loss: nan
+Epoch [9/50], Step [12/48], Loss: nan
+Epoch [9/50], Step [18/48], Loss: nan
+Epoch [9/50], Step [24/48], Loss: nan
+Epoch [9/50], Step [30/48], Loss: nan
+Epoch [9/50], Step [36/48], Loss: nan
+Epoch [9/50], Step [42/48], Loss: nan
+Epoch [9/50], Step [48/48], Loss: nan
+Epoch [10/50], Step [6/48], Loss: nan
+Epoch [10/50], Step [12/48], Loss: nan
+Epoch [10/50], Step [18/48], Loss: nan
+Epoch [10/50], Step [24/48], Loss: nan
+Epoch [10/50], Step [30/48], Loss: nan
+Epoch [10/50], Step [36/48], Loss: nan
+Epoch [10/50], Step [42/48], Loss: nan
+Epoch [10/50], Step [48/48], Loss: nan
+Epoch [11/50], Step [6/48], Loss: nan
+Epoch [11/50], Step [12/48], Loss: nan
+Epoch [11/50], Step [18/48], Loss: nan
+Epoch [11/50], Step [24/48], Loss: nan
+Epoch [11/50], Step [30/48], Loss: nan
+Epoch [11/50], Step [36/48], Loss: nan
+Epoch [11/50], Step [42/48], Loss: nan
+Epoch [11/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [11/50], Step [48/48], Loss: nan
+Epoch [12/50], Step [6/48], Loss: nan
+Epoch [12/50], Step [12/48], Loss: nan
+Epoch [12/50], Step [18/48], Loss: nan
+Epoch [12/50], Step [24/48], Loss: nan
+Epoch [12/50], Step [30/48], Loss: nan
+Epoch [12/50], Step [36/48], Loss: nan
+Epoch [12/50], Step [42/48], Loss: nan
+Epoch [12/50], Step [48/48], Loss: nan
+Epoch [13/50], Step [6/48], Loss: nan
+Epoch [13/50], Step [12/48], Loss: nan
+Epoch [13/50], Step [18/48], Loss: nan
+Epoch [13/50], Step [24/48], Loss: nan
+Epoch [13/50], Step [30/48], Loss: nan
+Epoch [13/50], Step [36/48], Loss: nan
+Epoch [13/50], Step [42/48], Loss: nan
+Epoch [13/50], Step [48/48], Loss: nan
+Epoch [14/50], Step [6/48], Loss: nan
+Epoch [14/50], Step [12/48], Loss: nan
+Epoch [14/50], Step [18/48], Loss: nan
+Epoch [14/50], Step [24/48], Loss: nan
+Epoch [14/50], Step [30/48], Loss: nan
+Epoch [14/50], Step [36/48], Loss: nan
+Epoch [14/50], Step [42/48], Loss: nan
+Epoch [14/50], Step [48/48], Loss: nan
+Epoch [15/50], Step [6/48], Loss: nan
+Epoch [15/50], Step [12/48], Loss: nan
+Epoch [15/50], Step [18/48], Loss: nan
+Epoch [15/50], Step [24/48], Loss: nan
+Epoch [15/50], Step [30/48], Loss: nan
+Epoch [15/50], Step [36/48], Loss: nan
+Epoch [15/50], Step [42/48], Loss: nan
+Epoch [15/50], Step [48/48], Loss: nan
+Epoch [16/50], Step [6/48], Loss: nan
+Epoch [16/50], Step [12/48], Loss: nan
+Epoch [16/50], Step [18/48], Loss: nan
+Epoch [16/50], Step [24/48], Loss: nan
+Epoch [16/50], Step [30/48], Loss: nan
+Epoch [16/50], Step [36/48], Loss: nan
+Epoch [16/50], Step [42/48], Loss: nan
+Epoch [16/50], Step [48/48], Loss: nan
+Epoch [17/50], Step [6/48], Loss: nan
+Epoch [17/50], Step [12/48], Loss: nan
+Epoch [17/50], Step [18/48], Loss: nan
+Epoch [17/50], Step [24/48], Loss: nan
+Epoch [17/50], Step [30/48], Loss: nan
+Epoch [17/50], Step [36/48], Loss: nan
+Epoch [17/50], Step [42/48], Loss: nan
+Epoch [17/50], Step [48/48], Loss: nan
+Epoch [18/50], Step [6/48], Loss: nan
+Epoch [18/50], Step [12/48], Loss: nan
+Epoch [18/50], Step [18/48], Loss: nan
+Epoch [18/50], Step [24/48], Loss: nan
+Epoch [18/50], Step [30/48], Loss: nan
+Epoch [18/50], Step [36/48], Loss: nan
+Epoch [18/50], Step [42/48], Loss: nan
+Epoch [18/50], Step [48/48], Loss: nan
+Epoch [19/50], Step [6/48], Loss: nan
+Epoch [19/50], Step [12/48], Loss: nan
+Epoch [19/50], Step [18/48], Loss: nan
+Epoch [19/50], Step [24/48], Loss: nan
+Epoch [19/50], Step [30/48], Loss: nan
+Epoch [19/50], Step [36/48], Loss: nan
+Epoch [19/50], Step [42/48], Loss: nan
+Epoch [19/50], Step [48/48], Loss: nan
+Epoch [20/50], Step [6/48], Loss: nan
+Epoch [20/50], Step [12/48], Loss: nan
+Epoch [20/50], Step [18/48], Loss: nan
+Epoch [20/50], Step [24/48], Loss: nan
+Epoch [20/50], Step [30/48], Loss: nan
+Epoch [20/50], Step [36/48], Loss: nan
+Epoch [20/50], Step [42/48], Loss: nan
+Epoch [20/50], Step [48/48], Loss: nan
+Epoch [21/50], Step [6/48], Loss: nan
+Epoch [21/50], Step [12/48], Loss: nan
+Epoch [21/50], Step [18/48], Loss: nan
+Epoch [21/50], Step [24/48], Loss: nan
+Epoch [21/50], Step [30/48], Loss: nan
+Epoch [21/50], Step [36/48], Loss: nan
+Epoch [21/50], Step [42/48], Loss: nan
+Epoch [21/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [21/50], Step [48/48], Loss: nan
+Epoch [22/50], Step [6/48], Loss: nan
+Epoch [22/50], Step [12/48], Loss: nan
+Epoch [22/50], Step [18/48], Loss: nan
+Epoch [22/50], Step [24/48], Loss: nan
+Epoch [22/50], Step [30/48], Loss: nan
+Epoch [22/50], Step [36/48], Loss: nan
+Epoch [22/50], Step [42/48], Loss: nan
+Epoch [22/50], Step [48/48], Loss: nan
+Epoch [23/50], Step [6/48], Loss: nan
+Epoch [23/50], Step [12/48], Loss: nan
+Epoch [23/50], Step [18/48], Loss: nan
+Epoch [23/50], Step [24/48], Loss: nan
+Epoch [23/50], Step [30/48], Loss: nan
+Epoch [23/50], Step [36/48], Loss: nan
+Epoch [23/50], Step [42/48], Loss: nan
+Epoch [23/50], Step [48/48], Loss: nan
+Epoch [24/50], Step [6/48], Loss: nan
+Epoch [24/50], Step [12/48], Loss: nan
+Epoch [24/50], Step [18/48], Loss: nan
+Epoch [24/50], Step [24/48], Loss: nan
+Epoch [24/50], Step [30/48], Loss: nan
+Epoch [24/50], Step [36/48], Loss: nan
+Epoch [24/50], Step [42/48], Loss: nan
+Epoch [24/50], Step [48/48], Loss: nan
+Epoch [25/50], Step [6/48], Loss: nan
+Epoch [25/50], Step [12/48], Loss: nan
+Epoch [25/50], Step [18/48], Loss: nan
+Epoch [25/50], Step [24/48], Loss: nan
+Epoch [25/50], Step [30/48], Loss: nan
+Epoch [25/50], Step [36/48], Loss: nan
+Epoch [25/50], Step [42/48], Loss: nan
+Epoch [25/50], Step [48/48], Loss: nan
+Epoch [26/50], Step [6/48], Loss: nan
+Epoch [26/50], Step [12/48], Loss: nan
+Epoch [26/50], Step [18/48], Loss: nan
+Epoch [26/50], Step [24/48], Loss: nan
+Epoch [26/50], Step [30/48], Loss: nan
+Epoch [26/50], Step [36/48], Loss: nan
+Epoch [26/50], Step [42/48], Loss: nan
+Epoch [26/50], Step [48/48], Loss: nan
+Epoch [27/50], Step [6/48], Loss: nan
+Epoch [27/50], Step [12/48], Loss: nan
+Epoch [27/50], Step [18/48], Loss: nan
+Epoch [27/50], Step [24/48], Loss: nan
+Epoch [27/50], Step [30/48], Loss: nan
+Epoch [27/50], Step [36/48], Loss: nan
+Epoch [27/50], Step [42/48], Loss: nan
+Epoch [27/50], Step [48/48], Loss: nan
+Epoch [28/50], Step [6/48], Loss: nan
+Epoch [28/50], Step [12/48], Loss: nan
+Epoch [28/50], Step [18/48], Loss: nan
+Epoch [28/50], Step [24/48], Loss: nan
+Epoch [28/50], Step [30/48], Loss: nan
+Epoch [28/50], Step [36/48], Loss: nan
+Epoch [28/50], Step [42/48], Loss: nan
+Epoch [28/50], Step [48/48], Loss: nan
+Epoch [29/50], Step [6/48], Loss: nan
+Epoch [29/50], Step [12/48], Loss: nan
+Epoch [29/50], Step [18/48], Loss: nan
+Epoch [29/50], Step [24/48], Loss: nan
+Epoch [29/50], Step [30/48], Loss: nan
+Epoch [29/50], Step [36/48], Loss: nan
+Epoch [29/50], Step [42/48], Loss: nan
+Epoch [29/50], Step [48/48], Loss: nan
+Epoch [30/50], Step [6/48], Loss: nan
+Epoch [30/50], Step [12/48], Loss: nan
+Epoch [30/50], Step [18/48], Loss: nan
+Epoch [30/50], Step [24/48], Loss: nan
+Epoch [30/50], Step [30/48], Loss: nan
+Epoch [30/50], Step [36/48], Loss: nan
+Epoch [30/50], Step [42/48], Loss: nan
+Epoch [30/50], Step [48/48], Loss: nan
+Epoch [31/50], Step [6/48], Loss: nan
+Epoch [31/50], Step [12/48], Loss: nan
+Epoch [31/50], Step [18/48], Loss: nan
+Epoch [31/50], Step [24/48], Loss: nan
+Epoch [31/50], Step [30/48], Loss: nan
+Epoch [31/50], Step [36/48], Loss: nan
+Epoch [31/50], Step [42/48], Loss: nan
+Epoch [31/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [31/50], Step [48/48], Loss: nan
+Epoch [32/50], Step [6/48], Loss: nan
+Epoch [32/50], Step [12/48], Loss: nan
+Epoch [32/50], Step [18/48], Loss: nan
+Epoch [32/50], Step [24/48], Loss: nan
+Epoch [32/50], Step [30/48], Loss: nan
+Epoch [32/50], Step [36/48], Loss: nan
+Epoch [32/50], Step [42/48], Loss: nan
+Epoch [32/50], Step [48/48], Loss: nan
+Epoch [33/50], Step [6/48], Loss: nan
+Epoch [33/50], Step [12/48], Loss: nan
+Epoch [33/50], Step [18/48], Loss: nan
+Epoch [33/50], Step [24/48], Loss: nan
+Epoch [33/50], Step [30/48], Loss: nan
+Epoch [33/50], Step [36/48], Loss: nan
+Epoch [33/50], Step [42/48], Loss: nan
+Epoch [33/50], Step [48/48], Loss: nan
+Epoch [34/50], Step [6/48], Loss: nan
+Epoch [34/50], Step [12/48], Loss: nan
+Epoch [34/50], Step [18/48], Loss: nan
+Epoch [34/50], Step [24/48], Loss: nan
+Epoch [34/50], Step [30/48], Loss: nan
+Epoch [34/50], Step [36/48], Loss: nan
+Epoch [34/50], Step [42/48], Loss: nan
+Epoch [34/50], Step [48/48], Loss: nan
+Epoch [35/50], Step [6/48], Loss: nan
+Epoch [35/50], Step [12/48], Loss: nan
+Epoch [35/50], Step [18/48], Loss: nan
+Epoch [35/50], Step [24/48], Loss: nan
+Epoch [35/50], Step [30/48], Loss: nan
+Epoch [35/50], Step [36/48], Loss: nan
+Epoch [35/50], Step [42/48], Loss: nan
+Epoch [35/50], Step [48/48], Loss: nan
+Epoch [36/50], Step [6/48], Loss: nan
+Epoch [36/50], Step [12/48], Loss: nan
+Epoch [36/50], Step [18/48], Loss: nan
+Epoch [36/50], Step [24/48], Loss: nan
+Epoch [36/50], Step [30/48], Loss: nan
+Epoch [36/50], Step [36/48], Loss: nan
+Epoch [36/50], Step [42/48], Loss: nan
+Epoch [36/50], Step [48/48], Loss: nan
+Epoch [37/50], Step [6/48], Loss: nan
+Epoch [37/50], Step [12/48], Loss: nan
+Epoch [37/50], Step [18/48], Loss: nan
+Epoch [37/50], Step [24/48], Loss: nan
+Epoch [37/50], Step [30/48], Loss: nan
+Epoch [37/50], Step [36/48], Loss: nan
+Epoch [37/50], Step [42/48], Loss: nan
+Epoch [37/50], Step [48/48], Loss: nan
+Epoch [38/50], Step [6/48], Loss: nan
+Epoch [38/50], Step [12/48], Loss: nan
+Epoch [38/50], Step [18/48], Loss: nan
+Epoch [38/50], Step [24/48], Loss: nan
+Epoch [38/50], Step [30/48], Loss: nan
+Epoch [38/50], Step [36/48], Loss: nan
+Epoch [38/50], Step [42/48], Loss: nan
+Epoch [38/50], Step [48/48], Loss: nan
+Epoch [39/50], Step [6/48], Loss: nan
+Epoch [39/50], Step [12/48], Loss: nan
+Epoch [39/50], Step [18/48], Loss: nan
+Epoch [39/50], Step [24/48], Loss: nan
+Epoch [39/50], Step [30/48], Loss: nan
+Epoch [39/50], Step [36/48], Loss: nan
+Epoch [39/50], Step [42/48], Loss: nan
+Epoch [39/50], Step [48/48], Loss: nan
+Epoch [40/50], Step [6/48], Loss: nan
+Epoch [40/50], Step [12/48], Loss: nan
+Epoch [40/50], Step [18/48], Loss: nan
+Epoch [40/50], Step [24/48], Loss: nan
+Epoch [40/50], Step [30/48], Loss: nan
+Epoch [40/50], Step [36/48], Loss: nan
+Epoch [40/50], Step [42/48], Loss: nan
+Epoch [40/50], Step [48/48], Loss: nan
+Epoch [41/50], Step [6/48], Loss: nan
+Epoch [41/50], Step [12/48], Loss: nan
+Epoch [41/50], Step [18/48], Loss: nan
+Epoch [41/50], Step [24/48], Loss: nan
+Epoch [41/50], Step [30/48], Loss: nan
+Epoch [41/50], Step [36/48], Loss: nan
+Epoch [41/50], Step [42/48], Loss: nan
+Epoch [41/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [41/50], Step [48/48], Loss: nan
+Epoch [42/50], Step [6/48], Loss: nan
+Epoch [42/50], Step [12/48], Loss: nan
+Epoch [42/50], Step [18/48], Loss: nan
+Epoch [42/50], Step [24/48], Loss: nan
+Epoch [42/50], Step [30/48], Loss: nan
+Epoch [42/50], Step [36/48], Loss: nan
+Epoch [42/50], Step [42/48], Loss: nan
+Epoch [42/50], Step [48/48], Loss: nan
+Epoch [43/50], Step [6/48], Loss: nan
+Epoch [43/50], Step [12/48], Loss: nan
+Epoch [43/50], Step [18/48], Loss: nan
+Epoch [43/50], Step [24/48], Loss: nan
+Epoch [43/50], Step [30/48], Loss: nan
+Epoch [43/50], Step [36/48], Loss: nan
+Epoch [43/50], Step [42/48], Loss: nan
+Epoch [43/50], Step [48/48], Loss: nan
+Epoch [44/50], Step [6/48], Loss: nan
+Epoch [44/50], Step [12/48], Loss: nan
+Epoch [44/50], Step [18/48], Loss: nan
+Epoch [44/50], Step [24/48], Loss: nan
+Epoch [44/50], Step [30/48], Loss: nan
+Epoch [44/50], Step [36/48], Loss: nan
+Epoch [44/50], Step [42/48], Loss: nan
+Epoch [44/50], Step [48/48], Loss: nan
+Epoch [45/50], Step [6/48], Loss: nan
+Epoch [45/50], Step [12/48], Loss: nan
+Epoch [45/50], Step [18/48], Loss: nan
+Epoch [45/50], Step [24/48], Loss: nan
+Epoch [45/50], Step [30/48], Loss: nan
+Epoch [45/50], Step [36/48], Loss: nan
+Epoch [45/50], Step [42/48], Loss: nan
+Epoch [45/50], Step [48/48], Loss: nan
+Epoch [46/50], Step [6/48], Loss: nan
+Epoch [46/50], Step [12/48], Loss: nan
+Epoch [46/50], Step [18/48], Loss: nan
+Epoch [46/50], Step [24/48], Loss: nan
+Epoch [46/50], Step [30/48], Loss: nan
+Epoch [46/50], Step [36/48], Loss: nan
+Epoch [46/50], Step [42/48], Loss: nan
+Epoch [46/50], Step [48/48], Loss: nan
+Epoch [47/50], Step [6/48], Loss: nan
+Epoch [47/50], Step [12/48], Loss: nan
+Epoch [47/50], Step [18/48], Loss: nan
+Epoch [47/50], Step [24/48], Loss: nan
+Epoch [47/50], Step [30/48], Loss: nan
+Epoch [47/50], Step [36/48], Loss: nan
+Epoch [47/50], Step [42/48], Loss: nan
+Epoch [47/50], Step [48/48], Loss: nan
+Epoch [48/50], Step [6/48], Loss: nan
+Epoch [48/50], Step [12/48], Loss: nan
+Epoch [48/50], Step [18/48], Loss: nan
+Epoch [48/50], Step [24/48], Loss: nan
+Epoch [48/50], Step [30/48], Loss: nan
+Epoch [48/50], Step [36/48], Loss: nan
+Epoch [48/50], Step [42/48], Loss: nan
+Epoch [48/50], Step [48/48], Loss: nan
+Epoch [49/50], Step [6/48], Loss: nan
+Epoch [49/50], Step [12/48], Loss: nan
+Epoch [49/50], Step [18/48], Loss: nan
+Epoch [49/50], Step [24/48], Loss: nan
+Epoch [49/50], Step [30/48], Loss: nan
+Epoch [49/50], Step [36/48], Loss: nan
+Epoch [49/50], Step [42/48], Loss: nan
+Epoch [49/50], Step [48/48], Loss: nan
+Epoch [50/50], Step [6/48], Loss: nan
+Epoch [50/50], Step [12/48], Loss: nan
+Epoch [50/50], Step [18/48], Loss: nan
+Epoch [50/50], Step [24/48], Loss: nan
+Epoch [50/50], Step [30/48], Loss: nan
+Epoch [50/50], Step [36/48], Loss: nan
+Epoch [50/50], Step [42/48], Loss: nan
+Epoch [50/50], Step [48/48], Loss: nan
+Epoch [1/50], Step [6/48], Loss: nan
+Epoch [1/50], Step [12/48], Loss: nan
+Epoch [1/50], Step [18/48], Loss: nan
+Epoch [1/50], Step [24/48], Loss: nan
+Epoch [1/50], Step [30/48], Loss: nan
+Epoch [1/50], Step [36/48], Loss: nan
+Epoch [1/50], Step [42/48], Loss: nan
+Epoch [1/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [1/50], Step [48/48], Loss: nan
+Epoch [2/50], Step [6/48], Loss: nan
+Epoch [2/50], Step [12/48], Loss: nan
+Epoch [2/50], Step [18/48], Loss: nan
+Epoch [2/50], Step [24/48], Loss: nan
+Epoch [2/50], Step [30/48], Loss: nan
+Epoch [2/50], Step [36/48], Loss: nan
+Epoch [2/50], Step [42/48], Loss: nan
+Epoch [2/50], Step [48/48], Loss: nan
+Epoch [3/50], Step [6/48], Loss: nan
+Epoch [3/50], Step [12/48], Loss: nan
+Epoch [3/50], Step [18/48], Loss: nan
+Epoch [3/50], Step [24/48], Loss: nan
+Epoch [3/50], Step [30/48], Loss: nan
+Epoch [3/50], Step [36/48], Loss: nan
+Epoch [3/50], Step [42/48], Loss: nan
+Epoch [3/50], Step [48/48], Loss: nan
+Epoch [4/50], Step [6/48], Loss: nan
+Epoch [4/50], Step [12/48], Loss: nan
+Epoch [4/50], Step [18/48], Loss: nan
+Epoch [4/50], Step [24/48], Loss: nan
+Epoch [4/50], Step [30/48], Loss: nan
+Epoch [4/50], Step [36/48], Loss: nan
+Epoch [4/50], Step [42/48], Loss: nan
+Epoch [4/50], Step [48/48], Loss: nan
+Epoch [5/50], Step [6/48], Loss: nan
+Epoch [5/50], Step [12/48], Loss: nan
+Epoch [5/50], Step [18/48], Loss: nan
+Epoch [5/50], Step [24/48], Loss: nan
+Epoch [5/50], Step [30/48], Loss: nan
+Epoch [5/50], Step [36/48], Loss: nan
+Epoch [5/50], Step [42/48], Loss: nan
+Epoch [5/50], Step [48/48], Loss: nan
+Epoch [6/50], Step [6/48], Loss: nan
+Epoch [6/50], Step [12/48], Loss: nan
+Epoch [6/50], Step [18/48], Loss: nan
+Epoch [6/50], Step [24/48], Loss: nan
+Epoch [6/50], Step [30/48], Loss: nan
+Epoch [6/50], Step [36/48], Loss: nan
+Epoch [6/50], Step [42/48], Loss: nan
+Epoch [6/50], Step [48/48], Loss: nan
+Epoch [7/50], Step [6/48], Loss: nan
+Epoch [7/50], Step [12/48], Loss: nan
+Epoch [7/50], Step [18/48], Loss: nan
+Epoch [7/50], Step [24/48], Loss: nan
+Epoch [7/50], Step [30/48], Loss: nan
+Epoch [7/50], Step [36/48], Loss: nan
+Epoch [7/50], Step [42/48], Loss: nan
+Epoch [7/50], Step [48/48], Loss: nan
+Epoch [8/50], Step [6/48], Loss: nan
+Epoch [8/50], Step [12/48], Loss: nan
+Epoch [8/50], Step [18/48], Loss: nan
+Epoch [8/50], Step [24/48], Loss: nan
+Epoch [8/50], Step [30/48], Loss: nan
+Epoch [8/50], Step [36/48], Loss: nan
+Epoch [8/50], Step [42/48], Loss: nan
+Epoch [8/50], Step [48/48], Loss: nan
+Epoch [9/50], Step [6/48], Loss: nan
+Epoch [9/50], Step [12/48], Loss: nan
+Epoch [9/50], Step [18/48], Loss: nan
+Epoch [9/50], Step [24/48], Loss: nan
+Epoch [9/50], Step [30/48], Loss: nan
+Epoch [9/50], Step [36/48], Loss: nan
+Epoch [9/50], Step [42/48], Loss: nan
+Epoch [9/50], Step [48/48], Loss: nan
+Epoch [10/50], Step [6/48], Loss: nan
+Epoch [10/50], Step [12/48], Loss: nan
+Epoch [10/50], Step [18/48], Loss: nan
+Epoch [10/50], Step [24/48], Loss: nan
+Epoch [10/50], Step [30/48], Loss: nan
+Epoch [10/50], Step [36/48], Loss: nan
+Epoch [10/50], Step [42/48], Loss: nan
+Epoch [10/50], Step [48/48], Loss: nan
+Epoch [11/50], Step [6/48], Loss: nan
+Epoch [11/50], Step [12/48], Loss: nan
+Epoch [11/50], Step [18/48], Loss: nan
+Epoch [11/50], Step [24/48], Loss: nan
+Epoch [11/50], Step [30/48], Loss: nan
+Epoch [11/50], Step [36/48], Loss: nan
+Epoch [11/50], Step [42/48], Loss: nan
+Epoch [11/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [11/50], Step [48/48], Loss: nan
+Epoch [12/50], Step [6/48], Loss: nan
+Epoch [12/50], Step [12/48], Loss: nan
+Epoch [12/50], Step [18/48], Loss: nan
+Epoch [12/50], Step [24/48], Loss: nan
+Epoch [12/50], Step [30/48], Loss: nan
+Epoch [12/50], Step [36/48], Loss: nan
+Epoch [12/50], Step [42/48], Loss: nan
+Epoch [12/50], Step [48/48], Loss: nan
+Epoch [13/50], Step [6/48], Loss: nan
+Epoch [13/50], Step [12/48], Loss: nan
+Epoch [13/50], Step [18/48], Loss: nan
+Epoch [13/50], Step [24/48], Loss: nan
+Epoch [13/50], Step [30/48], Loss: nan
+Epoch [13/50], Step [36/48], Loss: nan
+Epoch [13/50], Step [42/48], Loss: nan
+Epoch [13/50], Step [48/48], Loss: nan
+Epoch [14/50], Step [6/48], Loss: nan
+Epoch [14/50], Step [12/48], Loss: nan
+Epoch [14/50], Step [18/48], Loss: nan
+Epoch [14/50], Step [24/48], Loss: nan
+Epoch [14/50], Step [30/48], Loss: nan
+Epoch [14/50], Step [36/48], Loss: nan
+Epoch [14/50], Step [42/48], Loss: nan
+Epoch [14/50], Step [48/48], Loss: nan
+Epoch [15/50], Step [6/48], Loss: nan
+Epoch [15/50], Step [12/48], Loss: nan
+Epoch [15/50], Step [18/48], Loss: nan
+Epoch [15/50], Step [24/48], Loss: nan
+Epoch [15/50], Step [30/48], Loss: nan
+Epoch [15/50], Step [36/48], Loss: nan
+Epoch [15/50], Step [42/48], Loss: nan
+Epoch [15/50], Step [48/48], Loss: nan
+Epoch [16/50], Step [6/48], Loss: nan
+Epoch [16/50], Step [12/48], Loss: nan
+Epoch [16/50], Step [18/48], Loss: nan
+Epoch [16/50], Step [24/48], Loss: nan
+Epoch [16/50], Step [30/48], Loss: nan
+Epoch [16/50], Step [36/48], Loss: nan
+Epoch [16/50], Step [42/48], Loss: nan
+Epoch [16/50], Step [48/48], Loss: nan
+Epoch [17/50], Step [6/48], Loss: nan
+Epoch [17/50], Step [12/48], Loss: nan
+Epoch [17/50], Step [18/48], Loss: nan
+Epoch [17/50], Step [24/48], Loss: nan
+Epoch [17/50], Step [30/48], Loss: nan
+Epoch [17/50], Step [36/48], Loss: nan
+Epoch [17/50], Step [42/48], Loss: nan
+Epoch [17/50], Step [48/48], Loss: nan
+Epoch [18/50], Step [6/48], Loss: nan
+Epoch [18/50], Step [12/48], Loss: nan
+Epoch [18/50], Step [18/48], Loss: nan
+Epoch [18/50], Step [24/48], Loss: nan
+Epoch [18/50], Step [30/48], Loss: nan
+Epoch [18/50], Step [36/48], Loss: nan
+Epoch [18/50], Step [42/48], Loss: nan
+Epoch [18/50], Step [48/48], Loss: nan
+Epoch [19/50], Step [6/48], Loss: nan
+Epoch [19/50], Step [12/48], Loss: nan
+Epoch [19/50], Step [18/48], Loss: nan
+Epoch [19/50], Step [24/48], Loss: nan
+Epoch [19/50], Step [30/48], Loss: nan
+Epoch [19/50], Step [36/48], Loss: nan
+Epoch [19/50], Step [42/48], Loss: nan
+Epoch [19/50], Step [48/48], Loss: nan
+Epoch [20/50], Step [6/48], Loss: nan
+Epoch [20/50], Step [12/48], Loss: nan
+Epoch [20/50], Step [18/48], Loss: nan
+Epoch [20/50], Step [24/48], Loss: nan
+Epoch [20/50], Step [30/48], Loss: nan
+Epoch [20/50], Step [36/48], Loss: nan
+Epoch [20/50], Step [42/48], Loss: nan
+Epoch [20/50], Step [48/48], Loss: nan
+Epoch [21/50], Step [6/48], Loss: nan
+Epoch [21/50], Step [12/48], Loss: nan
+Epoch [21/50], Step [18/48], Loss: nan
+Epoch [21/50], Step [24/48], Loss: nan
+Epoch [21/50], Step [30/48], Loss: nan
+Epoch [21/50], Step [36/48], Loss: nan
+Epoch [21/50], Step [42/48], Loss: nan
+Epoch [21/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [21/50], Step [48/48], Loss: nan
+Epoch [22/50], Step [6/48], Loss: nan
+Epoch [22/50], Step [12/48], Loss: nan
+Epoch [22/50], Step [18/48], Loss: nan
+Epoch [22/50], Step [24/48], Loss: nan
+Epoch [22/50], Step [30/48], Loss: nan
+Epoch [22/50], Step [36/48], Loss: nan
+Epoch [22/50], Step [42/48], Loss: nan
+Epoch [22/50], Step [48/48], Loss: nan
+Epoch [23/50], Step [6/48], Loss: nan
+Epoch [23/50], Step [12/48], Loss: nan
+Epoch [23/50], Step [18/48], Loss: nan
+Epoch [23/50], Step [24/48], Loss: nan
+Epoch [23/50], Step [30/48], Loss: nan
+Epoch [23/50], Step [36/48], Loss: nan
+Epoch [23/50], Step [42/48], Loss: nan
+Epoch [23/50], Step [48/48], Loss: nan
+Epoch [24/50], Step [6/48], Loss: nan
+Epoch [24/50], Step [12/48], Loss: nan
+Epoch [24/50], Step [18/48], Loss: nan
+Epoch [24/50], Step [24/48], Loss: nan
+Epoch [24/50], Step [30/48], Loss: nan
+Epoch [24/50], Step [36/48], Loss: nan
+Epoch [24/50], Step [42/48], Loss: nan
+Epoch [24/50], Step [48/48], Loss: nan
+Epoch [25/50], Step [6/48], Loss: nan
+Epoch [25/50], Step [12/48], Loss: nan
+Epoch [25/50], Step [18/48], Loss: nan
+Epoch [25/50], Step [24/48], Loss: nan
+Epoch [25/50], Step [30/48], Loss: nan
+Epoch [25/50], Step [36/48], Loss: nan
+Epoch [25/50], Step [42/48], Loss: nan
+Epoch [25/50], Step [48/48], Loss: nan
+Epoch [26/50], Step [6/48], Loss: nan
+Epoch [26/50], Step [12/48], Loss: nan
+Epoch [26/50], Step [18/48], Loss: nan
+Epoch [26/50], Step [24/48], Loss: nan
+Epoch [26/50], Step [30/48], Loss: nan
+Epoch [26/50], Step [36/48], Loss: nan
+Epoch [26/50], Step [42/48], Loss: nan
+Epoch [26/50], Step [48/48], Loss: nan
+Epoch [27/50], Step [6/48], Loss: nan
+Epoch [27/50], Step [12/48], Loss: nan
+Epoch [27/50], Step [18/48], Loss: nan
+Epoch [27/50], Step [24/48], Loss: nan
+Epoch [27/50], Step [30/48], Loss: nan
+Epoch [27/50], Step [36/48], Loss: nan
+Epoch [27/50], Step [42/48], Loss: nan
+Epoch [27/50], Step [48/48], Loss: nan
+Epoch [28/50], Step [6/48], Loss: nan
+Epoch [28/50], Step [12/48], Loss: nan
+Epoch [28/50], Step [18/48], Loss: nan
+Epoch [28/50], Step [24/48], Loss: nan
+Epoch [28/50], Step [30/48], Loss: nan
+Epoch [28/50], Step [36/48], Loss: nan
+Epoch [28/50], Step [42/48], Loss: nan
+Epoch [28/50], Step [48/48], Loss: nan
+Epoch [29/50], Step [6/48], Loss: nan
+Epoch [29/50], Step [12/48], Loss: nan
+Epoch [29/50], Step [18/48], Loss: nan
+Epoch [29/50], Step [24/48], Loss: nan
+Epoch [29/50], Step [30/48], Loss: nan
+Epoch [29/50], Step [36/48], Loss: nan
+Epoch [29/50], Step [42/48], Loss: nan
+Epoch [29/50], Step [48/48], Loss: nan
+Epoch [30/50], Step [6/48], Loss: nan
+Epoch [30/50], Step [12/48], Loss: nan
+Epoch [30/50], Step [18/48], Loss: nan
+Epoch [30/50], Step [24/48], Loss: nan
+Epoch [30/50], Step [30/48], Loss: nan
+Epoch [30/50], Step [36/48], Loss: nan
+Epoch [30/50], Step [42/48], Loss: nan
+Epoch [30/50], Step [48/48], Loss: nan
+Epoch [31/50], Step [6/48], Loss: nan
+Epoch [31/50], Step [12/48], Loss: nan
+Epoch [31/50], Step [18/48], Loss: nan
+Epoch [31/50], Step [24/48], Loss: nan
+Epoch [31/50], Step [30/48], Loss: nan
+Epoch [31/50], Step [36/48], Loss: nan
+Epoch [31/50], Step [42/48], Loss: nan
+Epoch [31/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [31/50], Step [48/48], Loss: nan
+Epoch [32/50], Step [6/48], Loss: nan
+Epoch [32/50], Step [12/48], Loss: nan
+Epoch [32/50], Step [18/48], Loss: nan
+Epoch [32/50], Step [24/48], Loss: nan
+Epoch [32/50], Step [30/48], Loss: nan
+Epoch [32/50], Step [36/48], Loss: nan
+Epoch [32/50], Step [42/48], Loss: nan
+Epoch [32/50], Step [48/48], Loss: nan
+Epoch [33/50], Step [6/48], Loss: nan
+Epoch [33/50], Step [12/48], Loss: nan
+Epoch [33/50], Step [18/48], Loss: nan
+Epoch [33/50], Step [24/48], Loss: nan
+Epoch [33/50], Step [30/48], Loss: nan
+Epoch [33/50], Step [36/48], Loss: nan
+Epoch [33/50], Step [42/48], Loss: nan
+Epoch [33/50], Step [48/48], Loss: nan
+Epoch [34/50], Step [6/48], Loss: nan
+Epoch [34/50], Step [12/48], Loss: nan
+Epoch [34/50], Step [18/48], Loss: nan
+Epoch [34/50], Step [24/48], Loss: nan
+Epoch [34/50], Step [30/48], Loss: nan
+Epoch [34/50], Step [36/48], Loss: nan
+Epoch [34/50], Step [42/48], Loss: nan
+Epoch [34/50], Step [48/48], Loss: nan
+Epoch [35/50], Step [6/48], Loss: nan
+Epoch [35/50], Step [12/48], Loss: nan
+Epoch [35/50], Step [18/48], Loss: nan
+Epoch [35/50], Step [24/48], Loss: nan
+Epoch [35/50], Step [30/48], Loss: nan
+Epoch [35/50], Step [36/48], Loss: nan
+Epoch [35/50], Step [42/48], Loss: nan
+Epoch [35/50], Step [48/48], Loss: nan
+Epoch [36/50], Step [6/48], Loss: nan
+Epoch [36/50], Step [12/48], Loss: nan
+Epoch [36/50], Step [18/48], Loss: nan
+Epoch [36/50], Step [24/48], Loss: nan
+Epoch [36/50], Step [30/48], Loss: nan
+Epoch [36/50], Step [36/48], Loss: nan
+Epoch [36/50], Step [42/48], Loss: nan
+Epoch [36/50], Step [48/48], Loss: nan
+Epoch [37/50], Step [6/48], Loss: nan
+Epoch [37/50], Step [12/48], Loss: nan
+Epoch [37/50], Step [18/48], Loss: nan
+Epoch [37/50], Step [24/48], Loss: nan
+Epoch [37/50], Step [30/48], Loss: nan
+Epoch [37/50], Step [36/48], Loss: nan
+Epoch [37/50], Step [42/48], Loss: nan
+Epoch [37/50], Step [48/48], Loss: nan
+Epoch [38/50], Step [6/48], Loss: nan
+Epoch [38/50], Step [12/48], Loss: nan
+Epoch [38/50], Step [18/48], Loss: nan
+Epoch [38/50], Step [24/48], Loss: nan
+Epoch [38/50], Step [30/48], Loss: nan
+Epoch [38/50], Step [36/48], Loss: nan
+Epoch [38/50], Step [42/48], Loss: nan
+Epoch [38/50], Step [48/48], Loss: nan
+Epoch [39/50], Step [6/48], Loss: nan
+Epoch [39/50], Step [12/48], Loss: nan
+Epoch [39/50], Step [18/48], Loss: nan
+Epoch [39/50], Step [24/48], Loss: nan
+Epoch [39/50], Step [30/48], Loss: nan
+Epoch [39/50], Step [36/48], Loss: nan
+Epoch [39/50], Step [42/48], Loss: nan
+Epoch [39/50], Step [48/48], Loss: nan
+Epoch [40/50], Step [6/48], Loss: nan
+Epoch [40/50], Step [12/48], Loss: nan
+Epoch [40/50], Step [18/48], Loss: nan
+Epoch [40/50], Step [24/48], Loss: nan
+Epoch [40/50], Step [30/48], Loss: nan
+Epoch [40/50], Step [36/48], Loss: nan
+Epoch [40/50], Step [42/48], Loss: nan
+Epoch [40/50], Step [48/48], Loss: nan
+Epoch [41/50], Step [6/48], Loss: nan
+Epoch [41/50], Step [12/48], Loss: nan
+Epoch [41/50], Step [18/48], Loss: nan
+Epoch [41/50], Step [24/48], Loss: nan
+Epoch [41/50], Step [30/48], Loss: nan
+Epoch [41/50], Step [36/48], Loss: nan
+Epoch [41/50], Step [42/48], Loss: nan
+Epoch [41/50], Step [48/48], Loss: nan
+The average error of the model on the 13 test images  is: nan Epoch [41/50], Step [48/48], Loss: nan
+Epoch [42/50], Step [6/48], Loss: nan
+Epoch [42/50], Step [12/48], Loss: nan
+Epoch [42/50], Step [18/48], Loss: nan
+Epoch [42/50], Step [24/48], Loss: nan
+Epoch [42/50], Step [30/48], Loss: nan
+Epoch [42/50], Step [36/48], Loss: nan
+Epoch [42/50], Step [42/48], Loss: nan
+Epoch [42/50], Step [48/48], Loss: nan
+Epoch [43/50], Step [6/48], Loss: nan
+Epoch [43/50], Step [12/48], Loss: nan
+Epoch [43/50], Step [18/48], Loss: nan
+Epoch [43/50], Step [24/48], Loss: nan
+Epoch [43/50], Step [30/48], Loss: nan
+Epoch [43/50], Step [36/48], Loss: nan
+Epoch [43/50], Step [42/48], Loss: nan
+Epoch [43/50], Step [48/48], Loss: nan
+Epoch [44/50], Step [6/48], Loss: nan
+Epoch [44/50], Step [12/48], Loss: nan
+Epoch [44/50], Step [18/48], Loss: nan
+Epoch [44/50], Step [24/48], Loss: nan
+Epoch [44/50], Step [30/48], Loss: nan
+Epoch [44/50], Step [36/48], Loss: nan
+Epoch [44/50], Step [42/48], Loss: nan
+Epoch [44/50], Step [48/48], Loss: nan
+Epoch [45/50], Step [6/48], Loss: nan
+Epoch [45/50], Step [12/48], Loss: nan
+Epoch [45/50], Step [18/48], Loss: nan
+Epoch [45/50], Step [24/48], Loss: nan
+Epoch [45/50], Step [30/48], Loss: nan
+Epoch [45/50], Step [36/48], Loss: nan
+Epoch [45/50], Step [42/48], Loss: nan
+Epoch [45/50], Step [48/48], Loss: nan
+Epoch [46/50], Step [6/48], Loss: nan
+Epoch [46/50], Step [12/48], Loss: nan
+Epoch [46/50], Step [18/48], Loss: nan
+Epoch [46/50], Step [24/48], Loss: nan
+Epoch [46/50], Step [30/48], Loss: nan
+Epoch [46/50], Step [36/48], Loss: nan
+Epoch [46/50], Step [42/48], Loss: nan
+Epoch [46/50], Step [48/48], Loss: nan
+Epoch [47/50], Step [6/48], Loss: nan
+Epoch [47/50], Step [12/48], Loss: nan
+Epoch [47/50], Step [18/48], Loss: nan
+Epoch [47/50], Step [24/48], Loss: nan
+Epoch [47/50], Step [30/48], Loss: nan
+Epoch [47/50], Step [36/48], Loss: nan
+Epoch [47/50], Step [42/48], Loss: nan
+Epoch [47/50], Step [48/48], Loss: nan
+Epoch [48/50], Step [6/48], Loss: nan
+Epoch [48/50], Step [12/48], Loss: nan
+Epoch [48/50], Step [18/48], Loss: nan
+Epoch [48/50], Step [24/48], Loss: nan
+Epoch [48/50], Step [30/48], Loss: nan
+Epoch [48/50], Step [36/48], Loss: nan
+Epoch [48/50], Step [42/48], Loss: nan
+Epoch [48/50], Step [48/48], Loss: nan
+Epoch [49/50], Step [6/48], Loss: nan
+Epoch [49/50], Step [12/48], Loss: nan
+Epoch [49/50], Step [18/48], Loss: nan
+Epoch [49/50], Step [24/48], Loss: nan
+Epoch [49/50], Step [30/48], Loss: nan
+Epoch [49/50], Step [36/48], Loss: nan
+Epoch [49/50], Step [42/48], Loss: nan
+Epoch [49/50], Step [48/48], Loss: nan
+Epoch [50/50], Step [6/48], Loss: nan
+Epoch [50/50], Step [12/48], Loss: nan
+Epoch [50/50], Step [18/48], Loss: nan
+Epoch [50/50], Step [24/48], Loss: nan
+Epoch [50/50], Step [30/48], Loss: nan
+Epoch [50/50], Step [36/48], Loss: nan
+Epoch [50/50], Step [42/48], Loss: nan
+Epoch [50/50], Step [48/48], Loss: nan
+Epoch [1/50], Step [6/37], Loss: 0.2360, Loss_loc: 0.2360, Loss_pos: 0.2360
+Epoch [1/50], Step [12/37], Loss: 0.0992, Loss_loc: 0.0992, Loss_pos: 0.0992
+Epoch [1/50], Step [18/37], Loss: 0.2341, Loss_loc: 0.2341, Loss_pos: 0.2341
+Epoch [1/50], Step [24/37], Loss: 0.2465, Loss_loc: 0.2465, Loss_pos: 0.2465
+Epoch [1/50], Step [30/37], Loss: 0.4136, Loss_loc: 0.4136, Loss_pos: 0.4136
+Epoch [1/50], Step [36/37], Loss: 0.1097, Loss_loc: 0.1097, Loss_pos: 0.1097
+Epoch [1/50], Step [6/37], Loss: 0.6034, Loss_loc: 0.6034, Loss_pos: 0.6034
+Epoch [1/50], Step [12/37], Loss: 0.2440, Loss_loc: 0.2440, Loss_pos: 0.2440
+Epoch [1/50], Step [18/37], Loss: 0.0328, Loss_loc: 0.0328, Loss_pos: 0.0328
+Epoch [1/50], Step [24/37], Loss: 0.2950, Loss_loc: 0.2950, Loss_pos: 0.2950
+Epoch [1/50], Step [30/37], Loss: 0.0777, Loss_loc: 0.0777, Loss_pos: 0.0777
+Epoch [1/50], Step [36/37], Loss: 0.1473, Loss_loc: 0.1473, Loss_pos: 0.1473
+The average error of the model on the 13 test images  is: 0.179423525929451 Epoch [1/50], Step [37/37], Loss: 0.1615, loss_loc: 0.1615, loss_pos: 0.1615
+Epoch [2/50], Step [6/37], Loss: 0.3754, Loss_loc: 0.3754, Loss_pos: 0.3754
+Epoch [2/50], Step [12/37], Loss: 0.2879, Loss_loc: 0.2879, Loss_pos: 0.2879
+Epoch [2/50], Step [18/37], Loss: 0.0401, Loss_loc: 0.0401, Loss_pos: 0.0401
+Epoch [2/50], Step [24/37], Loss: 0.3365, Loss_loc: 0.3365, Loss_pos: 0.3365
+Epoch [2/50], Step [30/37], Loss: 0.1442, Loss_loc: 0.1442, Loss_pos: 0.1442
+Epoch [2/50], Step [36/37], Loss: 0.1582, Loss_loc: 0.1582, Loss_pos: 0.1582
+Epoch [3/50], Step [6/37], Loss: 0.2535, Loss_loc: 0.2535, Loss_pos: 0.2535
+Epoch [3/50], Step [12/37], Loss: 0.2757, Loss_loc: 0.2757, Loss_pos: 0.2757
+Epoch [3/50], Step [18/37], Loss: 0.0562, Loss_loc: 0.0562, Loss_pos: 0.0562
+Epoch [3/50], Step [24/37], Loss: 0.3182, Loss_loc: 0.3182, Loss_pos: 0.3182
+Epoch [3/50], Step [30/37], Loss: 0.2296, Loss_loc: 0.2296, Loss_pos: 0.2296
+Epoch [3/50], Step [36/37], Loss: 0.1690, Loss_loc: 0.1690, Loss_pos: 0.1690
+Epoch [4/50], Step [6/37], Loss: 0.2095, Loss_loc: 0.2095, Loss_pos: 0.2095
+Epoch [4/50], Step [12/37], Loss: 0.2265, Loss_loc: 0.2265, Loss_pos: 0.2265
+Epoch [4/50], Step [18/37], Loss: 0.0877, Loss_loc: 0.0877, Loss_pos: 0.0877
+Epoch [4/50], Step [24/37], Loss: 0.2556, Loss_loc: 0.2556, Loss_pos: 0.2556
+Epoch [4/50], Step [30/37], Loss: 0.2081, Loss_loc: 0.2081, Loss_pos: 0.2081
+Epoch [4/50], Step [36/37], Loss: 0.1825, Loss_loc: 0.1825, Loss_pos: 0.1825
+Epoch [5/50], Step [6/37], Loss: 0.2022, Loss_loc: 0.2022, Loss_pos: 0.2022
+Epoch [5/50], Step [12/37], Loss: 0.2050, Loss_loc: 0.2050, Loss_pos: 0.2050
+Epoch [5/50], Step [18/37], Loss: 0.0742, Loss_loc: 0.0742, Loss_pos: 0.0742
+Epoch [5/50], Step [24/37], Loss: 0.2591, Loss_loc: 0.2591, Loss_pos: 0.2591
+Epoch [5/50], Step [30/37], Loss: 0.2223, Loss_loc: 0.2223, Loss_pos: 0.2223
+Epoch [5/50], Step [36/37], Loss: 0.1947, Loss_loc: 0.1947, Loss_pos: 0.1947
+Epoch [6/50], Step [6/37], Loss: 0.2133, Loss_loc: 0.2133, Loss_pos: 0.2133
+Epoch [6/50], Step [12/37], Loss: 0.2056, Loss_loc: 0.2056, Loss_pos: 0.2056
+Epoch [6/50], Step [18/37], Loss: 0.0851, Loss_loc: 0.0851, Loss_pos: 0.0851
+Epoch [6/50], Step [24/37], Loss: 0.2504, Loss_loc: 0.2504, Loss_pos: 0.2504
+Epoch [6/50], Step [30/37], Loss: 0.2325, Loss_loc: 0.2325, Loss_pos: 0.2325
+Epoch [6/50], Step [36/37], Loss: 0.2036, Loss_loc: 0.2036, Loss_pos: 0.2036
+Epoch [7/50], Step [6/37], Loss: 0.2056, Loss_loc: 0.2056, Loss_pos: 0.2056
+Epoch [7/50], Step [12/37], Loss: 0.2038, Loss_loc: 0.2038, Loss_pos: 0.2038
+Epoch [7/50], Step [18/37], Loss: 0.0784, Loss_loc: 0.0784, Loss_pos: 0.0784
+Epoch [7/50], Step [24/37], Loss: 0.2500, Loss_loc: 0.2500, Loss_pos: 0.2500
+Epoch [7/50], Step [30/37], Loss: 0.2324, Loss_loc: 0.2324, Loss_pos: 0.2324
+Epoch [7/50], Step [36/37], Loss: 0.2127, Loss_loc: 0.2127, Loss_pos: 0.2127
+Epoch [8/50], Step [6/37], Loss: 0.2108, Loss_loc: 0.2108, Loss_pos: 0.2108
+Epoch [8/50], Step [12/37], Loss: 0.2025, Loss_loc: 0.2025, Loss_pos: 0.2025
+Epoch [8/50], Step [18/37], Loss: 0.0861, Loss_loc: 0.0861, Loss_pos: 0.0861
+Epoch [8/50], Step [24/37], Loss: 0.2448, Loss_loc: 0.2448, Loss_pos: 0.2448
+Epoch [8/50], Step [30/37], Loss: 0.2272, Loss_loc: 0.2272, Loss_pos: 0.2272
+Epoch [8/50], Step [36/37], Loss: 0.2109, Loss_loc: 0.2109, Loss_pos: 0.2109
+Epoch [9/50], Step [6/37], Loss: 0.2122, Loss_loc: 0.2122, Loss_pos: 0.2122
+Epoch [9/50], Step [12/37], Loss: 0.2022, Loss_loc: 0.2022, Loss_pos: 0.2022
+Epoch [9/50], Step [18/37], Loss: 0.0898, Loss_loc: 0.0898, Loss_pos: 0.0898
+Epoch [9/50], Step [24/37], Loss: 0.2413, Loss_loc: 0.2413, Loss_pos: 0.2413
+Epoch [9/50], Step [30/37], Loss: 0.2298, Loss_loc: 0.2298, Loss_pos: 0.2298
+Epoch [9/50], Step [36/37], Loss: 0.2153, Loss_loc: 0.2153, Loss_pos: 0.2153
+Epoch [10/50], Step [6/37], Loss: 0.2145, Loss_loc: 0.2145, Loss_pos: 0.2145
+Epoch [10/50], Step [12/37], Loss: 0.2054, Loss_loc: 0.2054, Loss_pos: 0.2054
+Epoch [10/50], Step [18/37], Loss: 0.0926, Loss_loc: 0.0926, Loss_pos: 0.0926
+Epoch [10/50], Step [24/37], Loss: 0.2398, Loss_loc: 0.2398, Loss_pos: 0.2398
+Epoch [10/50], Step [30/37], Loss: 0.2297, Loss_loc: 0.2297, Loss_pos: 0.2297
+Epoch [10/50], Step [36/37], Loss: 0.2173, Loss_loc: 0.2173, Loss_pos: 0.2173
+Epoch [11/50], Step [6/37], Loss: 0.2122, Loss_loc: 0.2122, Loss_pos: 0.2122
+Epoch [11/50], Step [12/37], Loss: 0.2037, Loss_loc: 0.2037, Loss_pos: 0.2037
+Epoch [11/50], Step [18/37], Loss: 0.0932, Loss_loc: 0.0932, Loss_pos: 0.0932
+Epoch [11/50], Step [24/37], Loss: 0.2391, Loss_loc: 0.2391, Loss_pos: 0.2391
+Epoch [11/50], Step [30/37], Loss: 0.2295, Loss_loc: 0.2295, Loss_pos: 0.2295
+Epoch [11/50], Step [36/37], Loss: 0.2178, Loss_loc: 0.2178, Loss_pos: 0.2178
+The average error of the model on the 13 test images  is: 0.15617184340953827 Epoch [11/50], Step [37/37], Loss: 0.1162, loss_loc: 0.1162, loss_pos: 0.1162
+Epoch [12/50], Step [6/37], Loss: 0.2117, Loss_loc: 0.2117, Loss_pos: 0.2117
+Epoch [12/50], Step [12/37], Loss: 0.2037, Loss_loc: 0.2037, Loss_pos: 0.2037
+Epoch [12/50], Step [18/37], Loss: 0.0936, Loss_loc: 0.0936, Loss_pos: 0.0936
+Epoch [12/50], Step [24/37], Loss: 0.2390, Loss_loc: 0.2390, Loss_pos: 0.2390
+Epoch [12/50], Step [30/37], Loss: 0.2299, Loss_loc: 0.2299, Loss_pos: 0.2299
+Epoch [12/50], Step [36/37], Loss: 0.2185, Loss_loc: 0.2185, Loss_pos: 0.2185
+Epoch [13/50], Step [6/37], Loss: 0.2113, Loss_loc: 0.2113, Loss_pos: 0.2113
+Epoch [13/50], Step [12/37], Loss: 0.2031, Loss_loc: 0.2031, Loss_pos: 0.2031
+Epoch [13/50], Step [18/37], Loss: 0.0940, Loss_loc: 0.0940, Loss_pos: 0.0940
+Epoch [13/50], Step [24/37], Loss: 0.2385, Loss_loc: 0.2385, Loss_pos: 0.2385
+Epoch [13/50], Step [30/37], Loss: 0.2295, Loss_loc: 0.2295, Loss_pos: 0.2295
+Epoch [13/50], Step [36/37], Loss: 0.2188, Loss_loc: 0.2188, Loss_pos: 0.2188
+Epoch [14/50], Step [6/37], Loss: 0.2108, Loss_loc: 0.2108, Loss_pos: 0.2108
+Epoch [14/50], Step [12/37], Loss: 0.2028, Loss_loc: 0.2028, Loss_pos: 0.2028
+Epoch [14/50], Step [18/37], Loss: 0.0942, Loss_loc: 0.0942, Loss_pos: 0.0942
+Epoch [14/50], Step [24/37], Loss: 0.2383, Loss_loc: 0.2383, Loss_pos: 0.2383
+Epoch [14/50], Step [30/37], Loss: 0.2297, Loss_loc: 0.2297, Loss_pos: 0.2297
+Epoch [14/50], Step [36/37], Loss: 0.2194, Loss_loc: 0.2194, Loss_pos: 0.2194
+Epoch [15/50], Step [6/37], Loss: 0.2104, Loss_loc: 0.2104, Loss_pos: 0.2104
+Epoch [15/50], Step [12/37], Loss: 0.2021, Loss_loc: 0.2021, Loss_pos: 0.2021
+Epoch [15/50], Step [18/37], Loss: 0.0943, Loss_loc: 0.0943, Loss_pos: 0.0943
+Epoch [15/50], Step [24/37], Loss: 0.2381, Loss_loc: 0.2381, Loss_pos: 0.2381
+Epoch [15/50], Step [30/37], Loss: 0.2296, Loss_loc: 0.2296, Loss_pos: 0.2296
+Epoch [15/50], Step [36/37], Loss: 0.2199, Loss_loc: 0.2199, Loss_pos: 0.2199
+Epoch [16/50], Step [6/37], Loss: 0.2100, Loss_loc: 0.2100, Loss_pos: 0.2100
+Epoch [16/50], Step [12/37], Loss: 0.2018, Loss_loc: 0.2018, Loss_pos: 0.2018
+Epoch [16/50], Step [18/37], Loss: 0.0939, Loss_loc: 0.0939, Loss_pos: 0.0939
+Epoch [16/50], Step [24/37], Loss: 0.2384, Loss_loc: 0.2384, Loss_pos: 0.2384
+Epoch [16/50], Step [30/37], Loss: 0.2291, Loss_loc: 0.2291, Loss_pos: 0.2291
+Epoch [16/50], Step [36/37], Loss: 0.2199, Loss_loc: 0.2199, Loss_pos: 0.2199
+Epoch [17/50], Step [6/37], Loss: 0.2091, Loss_loc: 0.2091, Loss_pos: 0.2091
+Epoch [17/50], Step [12/37], Loss: 0.2012, Loss_loc: 0.2012, Loss_pos: 0.2012
+Epoch [17/50], Step [18/37], Loss: 0.0926, Loss_loc: 0.0926, Loss_pos: 0.0926
+Epoch [17/50], Step [24/37], Loss: 0.2388, Loss_loc: 0.2388, Loss_pos: 0.2388
+Epoch [17/50], Step [30/37], Loss: 0.2274, Loss_loc: 0.2274, Loss_pos: 0.2274
+Epoch [17/50], Step [36/37], Loss: 0.2126, Loss_loc: 0.2126, Loss_pos: 0.2126
+Epoch [18/50], Step [6/37], Loss: 0.2108, Loss_loc: 0.2108, Loss_pos: 0.2108
+Epoch [18/50], Step [12/37], Loss: 0.2053, Loss_loc: 0.2053, Loss_pos: 0.2053
+Epoch [18/50], Step [18/37], Loss: 0.0901, Loss_loc: 0.0901, Loss_pos: 0.0901
+Epoch [18/50], Step [24/37], Loss: 0.2383, Loss_loc: 0.2383, Loss_pos: 0.2383
+Epoch [18/50], Step [30/37], Loss: 0.2267, Loss_loc: 0.2267, Loss_pos: 0.2267
+Epoch [18/50], Step [36/37], Loss: 0.2172, Loss_loc: 0.2172, Loss_pos: 0.2172
+Epoch [19/50], Step [6/37], Loss: 0.2114, Loss_loc: 0.2114, Loss_pos: 0.2114
+Epoch [19/50], Step [12/37], Loss: 0.2024, Loss_loc: 0.2024, Loss_pos: 0.2024
+Epoch [19/50], Step [18/37], Loss: 0.0929, Loss_loc: 0.0929, Loss_pos: 0.0929
+Epoch [19/50], Step [24/37], Loss: 0.2377, Loss_loc: 0.2377, Loss_pos: 0.2377
+Epoch [19/50], Step [30/37], Loss: 0.2287, Loss_loc: 0.2287, Loss_pos: 0.2287
+Epoch [19/50], Step [36/37], Loss: 0.2187, Loss_loc: 0.2187, Loss_pos: 0.2187
+Epoch [20/50], Step [6/37], Loss: 0.1959, Loss_loc: 0.1959, Loss_pos: 0.1959
+Epoch [20/50], Step [12/37], Loss: 0.1974, Loss_loc: 0.1974, Loss_pos: 0.1974
+Epoch [20/50], Step [18/37], Loss: 0.0865, Loss_loc: 0.0865, Loss_pos: 0.0865
+Epoch [20/50], Step [24/37], Loss: 0.2453, Loss_loc: 0.2453, Loss_pos: 0.2453
+Epoch [20/50], Step [30/37], Loss: 0.2256, Loss_loc: 0.2256, Loss_pos: 0.2256
+Epoch [20/50], Step [36/37], Loss: 0.2114, Loss_loc: 0.2114, Loss_pos: 0.2114
+Epoch [21/50], Step [6/37], Loss: 0.2163, Loss_loc: 0.2163, Loss_pos: 0.2163
+Epoch [21/50], Step [12/37], Loss: 0.2064, Loss_loc: 0.2064, Loss_pos: 0.2064
+Epoch [21/50], Step [18/37], Loss: 0.0917, Loss_loc: 0.0917, Loss_pos: 0.0917
+Epoch [21/50], Step [24/37], Loss: 0.2337, Loss_loc: 0.2337, Loss_pos: 0.2337
+Epoch [21/50], Step [30/37], Loss: 0.2234, Loss_loc: 0.2234, Loss_pos: 0.2234
+Epoch [21/50], Step [36/37], Loss: 0.2100, Loss_loc: 0.2100, Loss_pos: 0.2100
+The average error of the model on the 13 test images  is: 0.15246351063251495 Epoch [21/50], Step [37/37], Loss: 0.1289, loss_loc: 0.1289, loss_pos: 0.1289
+Epoch [22/50], Step [6/37], Loss: 0.2141, Loss_loc: 0.2141, Loss_pos: 0.2141
+Epoch [22/50], Step [12/37], Loss: 0.2163, Loss_loc: 0.2163, Loss_pos: 0.2163
+Epoch [22/50], Step [18/37], Loss: 0.0909, Loss_loc: 0.0909, Loss_pos: 0.0909
+Epoch [22/50], Step [24/37], Loss: 0.2394, Loss_loc: 0.2394, Loss_pos: 0.2394
+Epoch [22/50], Step [30/37], Loss: 0.2345, Loss_loc: 0.2345, Loss_pos: 0.2345
+Epoch [1/50], Step [6/37], Loss: 0.2677, Loss_loc: 0.2677, Loss_pos: 0.2677
+Epoch [1/50], Step [12/37], Loss: 0.4928, Loss_loc: 0.4928, Loss_pos: 0.4928
+Epoch [1/50], Step [18/37], Loss: 0.1345, Loss_loc: 0.1345, Loss_pos: 0.1345
+Epoch [1/50], Step [24/37], Loss: 0.0488, Loss_loc: 0.0488, Loss_pos: 0.0488
+Epoch [1/50], Step [30/37], Loss: 0.3002, Loss_loc: 0.3002, Loss_pos: 0.3002
+Epoch [1/50], Step [36/37], Loss: 0.1072, Loss_loc: 0.1072, Loss_pos: 0.1072
+The average error of the model on the 13 test images  is: 0.3745567500591278 Epoch [1/50], Step [37/37], Loss: 0.5903, loss_loc: 0.5903, loss_pos: 0.5903
+Epoch [2/50], Step [6/37], Loss: 0.2079, Loss_loc: 0.2079, Loss_pos: 0.2079
+Epoch [2/50], Step [12/37], Loss: 0.3892, Loss_loc: 0.3892, Loss_pos: 0.3892
+Epoch [2/50], Step [18/37], Loss: 0.0700, Loss_loc: 0.0700, Loss_pos: 0.0700
+Epoch [2/50], Step [24/37], Loss: 0.0436, Loss_loc: 0.0436, Loss_pos: 0.0436
+Epoch [2/50], Step [30/37], Loss: 0.3272, Loss_loc: 0.3272, Loss_pos: 0.3272
+Epoch [2/50], Step [36/37], Loss: 0.1461, Loss_loc: 0.1461, Loss_pos: 0.1461
+Epoch [3/50], Step [6/37], Loss: 0.1627, Loss_loc: 0.1627, Loss_pos: 0.1627
+Epoch [3/50], Step [12/37], Loss: 0.2306, Loss_loc: 0.2306, Loss_pos: 0.2306
+Epoch [3/50], Step [18/37], Loss: 0.0771, Loss_loc: 0.0771, Loss_pos: 0.0771
+Epoch [3/50], Step [24/37], Loss: 0.0360, Loss_loc: 0.0360, Loss_pos: 0.0360
+Epoch [3/50], Step [30/37], Loss: 0.3195, Loss_loc: 0.3195, Loss_pos: 0.3195
+Epoch [3/50], Step [36/37], Loss: 0.1738, Loss_loc: 0.1738, Loss_pos: 0.1738
+Epoch [4/50], Step [6/37], Loss: 0.2017, Loss_loc: 0.2017, Loss_pos: 0.2017
+Epoch [1/50], Step [6/37], Loss: 0.2819, Loss_loc: 0.2819, Loss_pos: 0.2819
+Epoch [1/50], Step [12/37], Loss: 0.1175, Loss_loc: 0.1175, Loss_pos: 0.1175
+Epoch [1/50], Step [18/37], Loss: 0.1447, Loss_loc: 0.1447, Loss_pos: 0.1447
+Epoch [1/50], Step [24/37], Loss: 0.0323, Loss_loc: 0.0323, Loss_pos: 0.0323
+Epoch [1/50], Step [30/37], Loss: 0.2949, Loss_loc: 0.2949, Loss_pos: 0.2949
+Epoch [1/50], Step [36/37], Loss: 0.3628, Loss_loc: 0.3628, Loss_pos: 0.3628
+The average error of the model on the 13 test images  is: 0.3311261534690857 Epoch [1/50], Step [37/37], Loss: 0.4949, loss_loc: 0.4949, loss_pos: 0.4949
+Epoch [2/50], Step [6/37], Loss: 0.1429, Loss_loc: 0.1429, Loss_pos: 0.1429
+Epoch [2/50], Step [12/37], Loss: 0.1422, Loss_loc: 0.1422, Loss_pos: 0.1422
+Epoch [2/50], Step [18/37], Loss: 0.0938, Loss_loc: 0.0938, Loss_pos: 0.0938
+Epoch [2/50], Step [24/37], Loss: 0.0950, Loss_loc: 0.0950, Loss_pos: 0.0950
+Epoch [2/50], Step [30/37], Loss: 0.2601, Loss_loc: 0.2601, Loss_pos: 0.2601
+Epoch [2/50], Step [36/37], Loss: 0.1486, Loss_loc: 0.1486, Loss_pos: 0.1486
+Epoch [3/50], Step [6/37], Loss: 0.0997, Loss_loc: 0.0997, Loss_pos: 0.0997
+Epoch [3/50], Step [12/37], Loss: 0.1024, Loss_loc: 0.1024, Loss_pos: 0.1024
+Epoch [3/50], Step [18/37], Loss: 0.0901, Loss_loc: 0.0901, Loss_pos: 0.0901
+Epoch [3/50], Step [24/37], Loss: 0.1056, Loss_loc: 0.1056, Loss_pos: 0.1056
+Epoch [3/50], Step [30/37], Loss: 0.2477, Loss_loc: 0.2477, Loss_pos: 0.2477
+Epoch [3/50], Step [36/37], Loss: 0.1407, Loss_loc: 0.1407, Loss_pos: 0.1407
+Epoch [4/50], Step [6/37], Loss: 0.0749, Loss_loc: 0.0749, Loss_pos: 0.0749
+Epoch [4/50], Step [12/37], Loss: 0.1064, Loss_loc: 0.1064, Loss_pos: 0.1064
+Epoch [4/50], Step [18/37], Loss: 0.1080, Loss_loc: 0.1080, Loss_pos: 0.1080
+Epoch [4/50], Step [24/37], Loss: 0.0965, Loss_loc: 0.0965, Loss_pos: 0.0965
+Epoch [4/50], Step [30/37], Loss: 0.2521, Loss_loc: 0.2521, Loss_pos: 0.2521
+Epoch [4/50], Step [36/37], Loss: 0.1260, Loss_loc: 0.1260, Loss_pos: 0.1260
+Epoch [5/50], Step [6/37], Loss: 0.0973, Loss_loc: 0.0973, Loss_pos: 0.0973
+Epoch [5/50], Step [12/37], Loss: 0.0936, Loss_loc: 0.0936, Loss_pos: 0.0936
+Epoch [5/50], Step [18/37], Loss: 0.1014, Loss_loc: 0.1014, Loss_pos: 0.1014
+Epoch [5/50], Step [24/37], Loss: 0.1023, Loss_loc: 0.1023, Loss_pos: 0.1023
+Epoch [5/50], Step [30/37], Loss: 0.2265, Loss_loc: 0.2265, Loss_pos: 0.2265
+Epoch [5/50], Step [36/37], Loss: 0.1207, Loss_loc: 0.1207, Loss_pos: 0.1207
+Epoch [6/50], Step [6/37], Loss: 0.1082, Loss_loc: 0.1082, Loss_pos: 0.1082
+Epoch [6/50], Step [12/37], Loss: 0.0907, Loss_loc: 0.0907, Loss_pos: 0.0907
+Epoch [6/50], Step [18/37], Loss: 0.0932, Loss_loc: 0.0932, Loss_pos: 0.0932
+Epoch [1/50], Step [6/7], Loss: 0.2459, Loss_loc: 0.2208, Loss_pos: 0.2709
+The average error of the model on the 13 test images  is: 1805.281982421875 Epoch [1/50], Step [7/7], Loss: 8245.5557, loss_loc: 8245.5557, loss_pos: 8245.5557
+Epoch [2/50], Step [6/7], Loss: 170.1013, Loss_loc: 169.9344, Loss_pos: 170.2682
+Epoch [3/50], Step [6/7], Loss: 0.5686, Loss_loc: 0.5669, Loss_pos: 0.5702
+Epoch [4/50], Step [6/7], Loss: 0.4090, Loss_loc: 0.4214, Loss_pos: 0.3966
+Epoch [5/50], Step [6/7], Loss: 0.3329, Loss_loc: 0.3221, Loss_pos: 0.3437
+Epoch [6/50], Step [6/7], Loss: 0.2571, Loss_loc: 0.2714, Loss_pos: 0.2428
+Epoch [7/50], Step [6/7], Loss: 0.1553, Loss_loc: 0.1563, Loss_pos: 0.1544
+Epoch [8/50], Step [6/7], Loss: 0.1486, Loss_loc: 0.1513, Loss_pos: 0.1459
+Epoch [9/50], Step [6/7], Loss: 0.1479, Loss_loc: 0.1446, Loss_pos: 0.1511
+Epoch [10/50], Step [6/7], Loss: 0.1411, Loss_loc: 0.1389, Loss_pos: 0.1433
+Epoch [11/50], Step [6/7], Loss: 0.1410, Loss_loc: 0.1382, Loss_pos: 0.1438
+The average error of the model on the 13 test images  is: 0.03228072449564934 Epoch [11/50], Step [7/7], Loss: 0.1320, loss_loc: 0.1320, loss_pos: 0.1320
+Epoch [12/50], Step [6/7], Loss: 0.1399, Loss_loc: 0.1364, Loss_pos: 0.1434
+Epoch [13/50], Step [6/7], Loss: 0.1408, Loss_loc: 0.1384, Loss_pos: 0.1432
+Epoch [14/50], Step [6/7], Loss: 0.1401, Loss_loc: 0.1369, Loss_pos: 0.1433

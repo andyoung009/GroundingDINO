@@ -728,7 +728,7 @@ class SwinTransformer(nn.Module):
         else:
             x = x.flatten(2).transpose(1, 2)
         x = self.pos_drop(x)
-        print('the forward message!')
+        # print('the forward message!')
 
         outs = []
         for i in range(self.num_layers):
@@ -758,7 +758,7 @@ class SwinTransformer(nn.Module):
             mask = F.interpolate(m[None].float(), size=out_i.shape[-2:]).to(torch.bool)[0]
             outs_dict[idx] = NestedTensor(out_i, mask)
 
-        print("it is a end of print!")
+        # print("it is a end of print!")
         return outs_dict
 
     def train(self, mode=True):

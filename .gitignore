@@ -150,3 +150,5 @@ tmp/
 *.jpeg
 *.1
 *.pth
+*.npy
+*.ckpt

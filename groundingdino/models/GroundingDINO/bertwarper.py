@@ -129,7 +129,8 @@ class BertModelWarper(nn.Module):
         # input head_mask has shape [num_heads] or [num_hidden_layers x num_heads]
         # and head_mask is converted to shape [num_hidden_layers x batch x num_heads x seq_length x seq_length]
         head_mask = self.get_head_mask(head_mask, self.config.num_hidden_layers)
-
+        # inputs_embeds=torch.from_numpy(inputs_embeds).cuda()
+        # print(input_ids.size(),position_ids.size(),token_type_ids.size(),inputs_embeds.size(),past_key_values_length.size())
         embedding_output = self.embeddings(
             input_ids=input_ids,
             position_ids=position_ids,

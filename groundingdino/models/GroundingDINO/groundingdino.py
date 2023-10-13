@@ -50,6 +50,7 @@ from .utils import MLP, ContrastiveEmbed, sigmoid_focal_loss
 from torch.utils.tensorboard import SummaryWriter
 # Writer will output to ./runs/ directory by default
 writer = SummaryWriter()
+# device = 'cuda:0'
 
 class GroundingDINO(nn.Module):
     """This is the Cross-Attention Detector module that performs object detection"""
@@ -109,6 +110,7 @@ class GroundingDINO(nn.Module):
         # bert
         self.tokenizer = get_tokenlizer.get_tokenlizer(text_encoder_type)
         self.bert = get_tokenlizer.get_pretrained_language_model(text_encoder_type)
+        # .to(device)
         self.bert.pooler.dense.weight.requires_grad_(False)
         self.bert.pooler.dense.bias.requires_grad_(False)
         self.bert = BertModelWarper(bert_model=self.bert)
@@ -122,7 +124,7 @@ class GroundingDINO(nn.Module):
         self.specical_tokens = self.tokenizer.convert_tokens_to_ids(["[CLS]", "[SEP]", ".", "?"])
 
         # prepare input projection layers
-        if num_feature_levels > 1:
+        if num_feature_levels > 1: # num_feature_levels = 4, 将图像主干网络输出的结果out分别（共4层）做映射
             num_backbone_outs = len(backbone.num_channels)
             input_proj_list = []
             for _ in range(num_backbone_outs):
@@ -228,9 +230,11 @@ class GroundingDINO(nn.Module):
                             dictionnaries containing the two above keys for each decoder layer.
         """
         if targets is None:
-            captions = kw["captions"]
+            # captions = kw["captions"]
+            captions = kw["instructions"]
         else:
-            captions = [t["caption"] for t in targets]
+            # captions = [t["caption"] for t in targets]
+            captions = [t["instructions"] for t in targets]
         len(captions)
 
         # encoder texts
@@ -244,8 +248,11 @@ class GroundingDINO(nn.Module):
         ) = generate_masks_with_special_tokens_and_transfer_map(
             tokenized, self.specical_tokens, self.tokenizer
         )
+        
+        # print(tokenized["input_ids"].shape)
+        # print(text_self_attention_masks.shape[1])
 
-        if text_self_attention_masks.shape[1] > self.max_text_len:
+        if text_self_attention_masks.shape[1] > self.max_text_len:  # 10 < 256 robot grasp caption is 10 tokens long
             text_self_attention_masks = text_self_attention_masks[
                 :, : self.max_text_len, : self.max_text_len
             ]
@@ -270,7 +277,7 @@ class GroundingDINO(nn.Module):
         # text_token_mask: True for nomask, False for mask
         # text_self_attention_masks: True for nomask, False for mask
 
-        if encoded_text.shape[1] > self.max_text_len:
+        if encoded_text.shape[1] > self.max_text_len: # 9 < encoded_text.shape[1] is 10 tokens long
             encoded_text = encoded_text[:, : self.max_text_len, :]
             text_token_mask = text_token_mask[:, : self.max_text_len]
             position_ids = position_ids[:, : self.max_text_len]
@@ -286,10 +293,10 @@ class GroundingDINO(nn.Module):
         }
 
         # import ipdb; ipdb.set_trace()
-        # 经过如下处理，使得图片有了mask，从image变成了NestedTensor(tensor, mask)
+        # 经过如下处理，使得图片有了mask，从image变成了NestedTensor(tensor, mask)，在此之前一直是image
         if isinstance(samples, (list, torch.Tensor)):
             samples = nested_tensor_from_tensor_list(samples)
-        features, poss = self.backbone(samples)
+        features, poss = self.backbone(samples) # 跳转到了Joiner类中，分别输出特征和对应的位置信息
 
         # tensors_gra, masks_gra = NestedTensor.decompose(samples)
         # writer.add_graph(self.backbone, tensors_gra)
@@ -317,43 +324,64 @@ class GroundingDINO(nn.Module):
                 poss.append(pos_l)
 
         input_query_bbox = input_query_label = attn_mask = dn_meta = None
-        hs, reference, hs_enc, ref_enc, init_box_proposal = self.transformer(
+        # hs, reference, hs_enc, ref_enc, init_box_proposal = self.transformer(
+        #     srcs, masks, input_query_bbox, poss, input_query_label, attn_mask, text_dict
+        # )
+
+        # 截断GroudingDINO输出，直接获取其encoder后的输出
+        memory_mask, memory_text_mask = self.transformer(
             srcs, masks, input_query_bbox, poss, input_query_label, attn_mask, text_dict
         )
 
-        # deformable-detr-like anchor update
-        outputs_coord_list = []
-        for dec_lid, (layer_ref_sig, layer_bbox_embed, layer_hs) in enumerate(
-            zip(reference[:-1], self.bbox_embed, hs)
-        ):
-            layer_delta_unsig = layer_bbox_embed(layer_hs)
-            layer_outputs_unsig = layer_delta_unsig + inverse_sigmoid(layer_ref_sig)
-            layer_outputs_unsig = layer_outputs_unsig.sigmoid()
-            outputs_coord_list.append(layer_outputs_unsig)
-        outputs_coord_list = torch.stack(outputs_coord_list)
+        # # deformable-detr-like anchor update
+        # '''
+        # 上述代码的作用是生成模型的输出。它通过对模型的不同层进行操作，计算并生成预测的类别概率和边界框坐标。
 
-        # output
-        outputs_class = torch.stack(
-            [
-                layer_cls_embed(layer_hs, text_dict)
-                for layer_cls_embed, layer_hs in zip(self.class_embed, hs)
-            ]
-        )
-        out = {"pred_logits": outputs_class[-1], "pred_boxes": outputs_coord_list[-1]}
+        # 具体来说，代码中的主要步骤如下：
 
-        # # for intermediate outputs
-        # if self.aux_loss:
-        #     out['aux_outputs'] = self._set_aux_loss(outputs_class, outputs_coord_list)
+        # 1. 遍历模型的不同层：使用 `enumerate()` 函数和 `zip()` 函数，遍历模型的不同层，包括 `reference[:-1]`、`self.bbox_embed` 和 `hs`。
+        # 2. 计算边界框的偏移量：对于每个层，使用 `layer_bbox_embed` 函数将 `layer_hs` 进行边界框嵌入操作，得到边界框的偏移量 `layer_delta_unsig`。
+        # 3. 计算未经激活函数处理的输出：将边界框的偏移量 `layer_delta_unsig` 与 `layer_ref_sig` 进行逆 Sigmoid 函数操作，并将结果与 `layer_delta_unsig` 相加，得到未经激活函数处理的输出 `layer_outputs_unsig`。
+        # 4. 应用 Sigmoid 激活函数：对未经激活函数处理的输出 `layer_outputs_unsig` 应用 Sigmoid 激活函数，得到经过激活函数处理的输出。
+        # 5. 将输出添加到列表中：将经过激活函数处理的输出 `layer_outputs_unsig` 添加到 `outputs_coord_list` 列表中。
+        # 6. 将输出转换为张量：使用 `torch.stack()` 函数将 `outputs_coord_list` 列表中的输出转换为张量。
+        # 7. 生成最终的输出：使用 `zip()` 函数遍历模型的不同层，对每个层的 `layer_hs` 使用 `layer_cls_embed` 函数进行类别嵌入操作，并将结果添加到 `outputs_class` 列表中。最后，将最后一层的类别概率和边界框坐标作为模型的最终输出。
 
-        # # for encoder output
-        # if hs_enc is not None:
-        #     # prepare intermediate outputs
-        #     interm_coord = ref_enc[-1]
-        #     interm_class = self.transformer.enc_out_class_embed(hs_enc[-1], text_dict)
-        #     out['interm_outputs'] = {'pred_logits': interm_class, 'pred_boxes': interm_coord}
-        #     out['interm_outputs_for_matching_pre'] = {'pred_logits': interm_class, 'pred_boxes': init_box_proposal}
+        # 总体而言，这段代码的作用是计算模型的输出，包括类别概率和边界框坐标，并将其作为字典形式的输出返回。这些输出可以用于模型的预测和后续的任务处理。
+        # '''
+        # outputs_coord_list = []
+        # for dec_lid, (layer_ref_sig, layer_bbox_embed, layer_hs) in enumerate(
+        #     zip(reference[:-1], self.bbox_embed, hs)
+        # ):
+        #     layer_delta_unsig = layer_bbox_embed(layer_hs)
+        #     layer_outputs_unsig = layer_delta_unsig + inverse_sigmoid(layer_ref_sig)
+        #     layer_outputs_unsig = layer_outputs_unsig.sigmoid()
+        #     outputs_coord_list.append(layer_outputs_unsig)
+        # outputs_coord_list = torch.stack(outputs_coord_list)
 
-        return out
+        # # output
+        # outputs_class = torch.stack(
+        #     [
+        #         layer_cls_embed(layer_hs, text_dict)
+        #         for layer_cls_embed, layer_hs in zip(self.class_embed, hs)
+        #     ]
+        # )
+        # out = {"pred_logits": outputs_class[-1], "pred_boxes": outputs_coord_list[-1]}
+
+        # # # for intermediate outputs
+        # # if self.aux_loss:
+        # #     out['aux_outputs'] = self._set_aux_loss(outputs_class, outputs_coord_list)
+
+        # # # for encoder output
+        # # if hs_enc is not None:
+        # #     # prepare intermediate outputs
+        # #     interm_coord = ref_enc[-1]
+        # #     interm_class = self.transformer.enc_out_class_embed(hs_enc[-1], text_dict)
+        # #     out['interm_outputs'] = {'pred_logits': interm_class, 'pred_boxes': interm_coord}
+        # #     out['interm_outputs_for_matching_pre'] = {'pred_logits': interm_class, 'pred_boxes': init_box_proposal}
+
+        # return out
+        return memory_mask, memory_text_mask
 
     @torch.jit.unused
     def _set_aux_loss(self, outputs_class, outputs_coord):

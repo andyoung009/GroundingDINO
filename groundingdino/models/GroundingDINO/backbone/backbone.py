@@ -189,7 +189,7 @@ def build_backbone(args):
         )
         bb_num_channels = backbone.num_channels
     elif args.backbone in [
-        "swin_T_224_1k",
+        "swin_T_224_1k",    # 示例权重主干网络是这个
         "swin_B_224_22k",
         "swin_B_384_22k",
         "swin_L_224_22k",
