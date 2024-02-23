@@ -18,6 +18,8 @@ from groundingdino.util.utils import clean_state_dict, get_phrases_from_posmap
 from groundingdino.models.GroundingDINO.groundingdino import GroundingDINO
 from groundingdino.util.inference import load_model, load_image, predict, annotate, preprocess_caption
 
+from transformers import AutoImageProcessor, ResNetForImageClassification
+
 # 配置文件、权重文件路径加载
 # ------------------------------------------------------------------------------------
 HOME = os.getcwd()
@@ -35,12 +37,27 @@ print(WEIGHTS_PATH, "; exist:", os.path.isfile(WEIGHTS_PATH))
 class Depth_Feature_extract(nn.Module):
     def __init__(self, device='cuda', lr=1e-3, output_dim=2048+4*8):
         super().__init__()
-        self.depth_feature_extract = models.resnet50(pretrained=True)        
+        self.depth_feature_extract = models.resnet50(pretrained=True)
+        # self.processor = AutoImageProcessor.from_pretrained("microsoft/resnet-50")
+        # self.depth_feature_extract = ResNetForImageClassification.from_pretrained("microsoft/resnet-50")
+
+        # self.depth_feature_extract.resnet.embedder.embedder.convolution = nn.Conv2d(2, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+        # self.depth_feature_extract.resnet.pooler = nn.Identity()
+        # self.depth_feature_extract.classifier = nn.Identity()
+        # 为了适应输入的深度图像和mask信息，将第一个卷积层修改为2通道，末端pooling之前全部替换为Identity()
+        self.depth_feature_extract.conv1 = nn.Conv2d(2, 64, kernel_size=(7,7), stride=(2,2), padding=(3,3), bias=False)
+        self.depth_feature_extract.avgpool = nn.Identity()
         self.depth_feature_extract.fc = nn.Identity()
 
+        nn.init.kaiming_normal_(self.depth_feature_extract.conv1.weight, mode="fan_out", nonlinearity="relu")
         # self.depth_feature_extract.fc = nn.Linear(2048,output_dim)
         # nn.init.xavier_uniform_(self.depth_feature_extract.fc.weight)
         # nn.init.zeros_(self.depth_feature_extract.fc.bias)
+        # self.logger = DataLog()
+        # self.save_logs = save_logs
+
+        # if self.save_logs:
+        #     self.logger = DataLog()
 
     def forward(self, x):
         return self.depth_feature_extract(x)
@@ -50,6 +67,30 @@ class Embedding2pose(nn.Module):
 
     def __init__(self, input_dim, hidden_dim, output_dim, num_layers):
         super().__init__()
+
+        self.conv1 = nn.Conv2d(256,512,kernel_size=(3,3),stride=(2,2),padding=(1,1), bias=False)
+        self.bn1 = nn.BatchNorm2d(512)
+        self.relu = nn.ReLU(inplace=True)
+        self.dropout1 = nn.Dropout(0.5)
+        self.conv2 = nn.Conv2d(512,1024,kernel_size=(3,3),stride=(2,2),padding=(1,1), bias=False)
+        self.bn2 = nn.BatchNorm2d(1024)
+        self.dropout2 = nn.Dropout(0.5)
+        self.conv3 = nn.Conv2d(1024,2048,kernel_size=(3,3),stride=(2,2),padding=(1,1), bias=False)
+        self.bn3 = nn.BatchNorm2d(2048)
+        self.dropout3 = nn.Dropout(0.5)
+        self.conv4 = nn.Conv2d(2048,4096,kernel_size=(3,3),stride=(2,2),padding=(1,1), bias=False)
+        self.bn4 = nn.BatchNorm2d(4096)
+        self.dropout4 = nn.Dropout(0.5)
+        self.conv5 = nn.Conv2d(4096,8192,kernel_size=(3,3),stride=(2,2),padding=(1,1), bias=False)
+        self.bn5 = nn.BatchNorm2d(8192)
+        self.dropout5 = nn.Dropout(0.5)
+        self.conv6 = nn.Conv2d(8192,2048,kernel_size=(1,1),stride=(1,1),padding=(0,0), bias=False)
+        self.bn6 = nn.BatchNorm2d(2048)
+        self.dropout6 = nn.Dropout(0.5)
+        self.conv7 = nn.Conv2d(2048,256,kernel_size=(1,1),stride=(1,1),padding=(0,0), bias=False)
+        self.bn7 = nn.BatchNorm2d(256)
+        self.dropout7 = nn.Dropout(0.5)
+
         self.num_layers = num_layers
         h = [hidden_dim] * (num_layers - 1)
         self.layers = nn.ModuleList(
@@ -58,11 +99,25 @@ class Embedding2pose(nn.Module):
         self.apply(self.initialize_weights)
 
     def initialize_weights(self, m):
-        if isinstance(m, nn.Linear):
-            nn.init.xavier_uniform_(m.weight)
-            nn.init.zeros_(m.bias)
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+            elif isinstance(m, nn.Linear):
+                nn.init.xavier_uniform_(m.weight)
+                nn.init.zeros_(m.bias)
+            elif isinstance(m, (nn.BatchNorm2d, nn.GroupNorm)):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
 
     def forward(self, x):
+        x = self.dropout1(self.relu(self.bn1(self.conv1(x))))
+        x = self.dropout2(self.relu(self.bn2(self.conv2(x))))
+        x = self.dropout3(self.relu(self.bn3(self.conv3(x))))
+        x = self.dropout4(self.relu(self.bn4(self.conv4(x))))
+        x = self.dropout5(self.relu(self.bn5(self.conv5(x))))
+        x = self.dropout6(self.relu(self.bn6(self.conv6(x))))
+        x = self.dropout7(self.relu(self.bn7(self.conv7(x))))
+        x = torch.flatten(x,1) # x.shape (b,256,3,3) -> (b,2304) 因此 Embedding2pose 的输入维度为2304
         for i, layer in enumerate(self.layers):
             x = F.relu(layer(x)) if i < self.num_layers - 1 else layer(x)
         return x
@@ -85,9 +140,10 @@ class RGBD2pose(nn.Module):
         # self.e2pose = Embedding2pose(input_dim=4160,hidden_dim=hidden_dim,output_dim=7,num_layers=2)
         # 236080 = 900*(256+4) + 2080           (256+4)*8 = 2080
         # self.e2pose = Embedding2pose(input_dim=236080,hidden_dim=hidden_dim,output_dim=7,num_layers=2).to(device)
-        self.e2pose = Embedding2pose(input_dim=4096,hidden_dim=hidden_dim,output_dim=7,num_layers=2).to(device)
+        self.e2pose = Embedding2pose(input_dim=2304,hidden_dim=hidden_dim,output_dim=7,num_layers=3).to(device)
         self.dep_fea_extra = Depth_Feature_extract(device=device,lr=1e-3, output_dim=2048+4*8).to(device)
         # self.e2pose.apply(initialize_weights)
+
 
     def preprocess_caption_instructions(self, instructions):
         processed = []
@@ -114,18 +170,30 @@ class RGBD2pose(nn.Module):
         # 图片深度信息复制为3通道同时将深度值变为原来的1/3
         # 引入mask，将mask和深度图像求均值作为第三通道，附加mask和深度图像通道最后输入到resnet50中
         mask = mask.float()
-        depth_and_mask = (img_depth / 255.0 + mask) / 2
-        total_depth_and_mask = torch.stack((mask, img_depth, depth_and_mask), dim=1)
+        # depth_and_mask = (img_depth / 255.0 + mask) / 2
+        # total_depth_and_mask = torch.stack((mask, img_depth, depth_and_mask), dim=1)
+        total_depth_and_mask = torch.stack((mask, img_depth), dim=1)
         # img_depth = img_depth.unsqueeze(1).repeat(1,3,1,1) / 3.0 / 255.0
         # 特征提取拼接
         # img_depth_out = self.backbone(img_depth, instructions=instructions)
+
+        # total_depth_and_mask_precessed = torch.permute(total_depth_and_mask, (0, 2, 3, 1))
+
+        # total_depth_and_mask_precessed = self.dep_fea_extra.processor(total_depth_and_mask_precessed, return_tensors="pt")
         img_depth_out = self.dep_fea_extra(total_depth_and_mask)
+        B, C, H, W = img_depth_out.shape
+        img_depth_out = img_depth_out.reshape(B, 256, C//256, H, W).reshape(B,256,-1)
+        img_depth_out = torch.permute(img_depth_out, (0, 2, 1))
+        info_concated = torch.cat((img_rgb_out[0], img_depth_out), dim=1)
+        info_concated = F.pad(info_concated, (0,0,26,26), "constant", 0)
+        info_concated = torch.permute(info_concated, (0, 2, 1)).reshape(B, 256, 96, 92)
 
         # img_rgb_embed = torch.cat((img_rgb_out["pred_logits"], img_rgb_out["pred_boxes"]),dim=-1)
-        B, N, C = img_rgb_out[0].shape
-        deformed_img_rgb_out_0 = F.pad(img_rgb_out[0], (0, 0, 2,2), "constant", 0).reshape(B,-1,256*8)
-        deformed_img_rgb_out_1 = torch.mean(deformed_img_rgb_out_0, dim=1)
-        img_rgb_embed = torch.cat((deformed_img_rgb_out_1, img_depth_out),dim=-1)
+        # B, N, C = img_rgb_out[0].shape
+        # deformed_img_rgb_out_0 = F.pad(img_rgb_out[0], (0, 0, 2,2), "constant", 0).reshape(B,-1,256*8)
+        # deformed_img_rgb_out_1 = torch.mean(deformed_img_rgb_out_0, dim=1)
+
+        # img_rgb_embed = torch.cat((deformed_img_rgb_out_1, img_depth_out),dim=-1)
         # img_depth_embed = torch.cat((img_depth_out["pred_logits"], img_depth_out["pred_boxes"]),dim=-1)
         # total_embed = torch.cat((img_rgb_embed,img_depth_embed),dim=-1) # total_embed.shape=(B,nq,(256+4)*2)
 
@@ -139,6 +207,6 @@ class RGBD2pose(nn.Module):
         # img_rgb_out['pred_boxes'] = img_rgb_out['pred_boxes'].reshape(B,-1)
         # total_embed = torch.cat((img_rgb_out['pred_logits'], img_rgb_out['pred_boxes'], img_depth_out),dim=-1)
         # pose_info = self.e2pose(total_embed)
-        pose_info = self.e2pose(img_rgb_embed)
+        pose_info = self.e2pose(info_concated)
         return pose_info
 

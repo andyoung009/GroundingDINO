@@ -1,10 +1,11 @@
 # modified from https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5#scrollTo=8IRGo8d0qkgR 
 # by andyoung0507
-# 利用maskrcnn输出的分类结果和掩码，输入到MLP中去输出动作，但是从测试结果来看并不理想，
+# 利用 maskrcnn 输出的分类结果和掩码，输入到MLP中去输出动作，但是从测试结果来看并不理想，
 # 首先预训练模型是coco数据集训练的，这样分类的结果是否可以与语言输入的特征匹配？
 # 其次输出的精度不太好，图片效果可以看 outputs/15_maskrcnn.png 
 # 代码输出的结果的标签是coco dataset 2017格式，具体对应关系可以参考这里 https://github.com/ultralytics/yolov5/blob/master/data/coco.yaml
 # 39: bottle; 41：cup 对应抓取的物体为瓶子, 但是不能识别 牛奶盒：milk carton
+
 import torch, detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()

@@ -18,6 +18,14 @@ class IN2POSEDATASET(Dataset):
         
         super(IN2POSEDATASET, self).__init__()
 
+        # transform = transforms.Compose([
+        #     transforms.RandomHorizontalFlip(),  # 随机水平翻转
+        #     transforms.RandomRotation(10),  # 随机旋转（-10到10度之间）
+        #     transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),  # 随机调整亮度、对比度、饱和度和色调
+        #     # transforms.RandomResizedCrop(224),  # 随机裁剪和缩放到指定大小
+        #     transforms.ToTensor(),  # 转换为张量
+        #     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # 归一化
+        # ])
         self.data_path = root
         self.ann_path = os.path.join(self.data_path, ann_file)
         self.transform = transform
@@ -56,6 +64,7 @@ class IN2POSEDATASET(Dataset):
         if self.transform is not None:
             images_rgb = self.transform(images_rgb)
 
+        # 深度信息还是使用的原来的包含整个场景信息的深度图，没有利用掩码图来对深度进行关键信息提取,如何实现呢？
         images_depth = np.load(self.data_path + '/' + self.database.iloc[index, 2])
         if images_depth.dtype == np.uint16:
             images_depth = images_depth.astype(np.uint8)
@@ -63,6 +72,7 @@ class IN2POSEDATASET(Dataset):
         # if self.transform is not None:
         #     images_depth = self.transform(images_depth)
 
+        # 取相应训练或者验证集数据表格第六列对应的利用maskrcnn处理后保存的图像掩码的对应结果
         mask = np.load(self.data_path + '/' + self.database.iloc[index, 6])
 
         # outpus  shape = (b,3+4=7)
